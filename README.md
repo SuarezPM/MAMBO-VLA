@@ -5,7 +5,7 @@ pick, table set-down, handover, place — from a single relay sentence plus four
 camera views. No hidden seeds, no deleted failures, no borrowed numbers: frozen
 inputs hashed before running, every miss kept, every bench log in-repo.
 
-Public repo: `https://github.com/SuarezPM/MAMBO-VLA` (pinned copy `@b091e11`
+Public repo: `https://github.com/SuarezPM/MAMBO-VLA` (pinned copy `@689af97`
 cited in `docs/submission_draft/SUBMISSION_COPY.md`).
 
 ## Why this entry deserves your 100 points
