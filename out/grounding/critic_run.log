@@ -1,0 +1,33 @@
+WARN adjunct-drop safety-relevante (park) ignorado en: Arm A pick up the mug and park. [precondicion de cableado futuro]
+[OK ] a01 expect=accept got=accept :: accept: fase=pick,brazo=A,objeto=mug :: Arm A pick the mug.
+[OK ] a02 expect=accept got=accept :: accept: fase=pick,brazo=A,objeto=mug :: Left arm picks up the mug from staging.
+[OK ] a03 expect=accept got=accept :: accept: fase=pick,brazo=B,objeto=plate :: Arm B grasp the plate.
+[OK ] a04 expect=accept got=accept :: accept: fase=set-down,brazo=A,objeto=mug :: Arm A set down the mug at the relay.
+[OK ] a05 expect=accept got=accept :: accept: fase=set-down,brazo=B,objeto=mug :: Right arm sets down the mug at the relay.
+[OK ] a06 expect=accept got=accept :: accept: fase=handover,brazo=A,objeto=mug :: Arm A hand over the mug at the relay.
+[OK ] a07 expect=accept got=accept :: accept: fase=handover,brazo=B,objeto=mug :: Arm B handover the mug at the relay.
+[OK ] a08 expect=accept got=accept :: accept: fase=handover,brazo=B,objeto=plate :: Right arm hands off the plate at the relay.
+[OK ] a09 expect=accept got=accept :: accept: fase=place,brazo=B,objeto=mug :: Arm B place the mug at the destination.
+[OK ] a10 expect=accept got=accept :: accept: fase=place,brazo=B,objeto=plate :: Arm B places the plate in the right zone.
+[OK ] a11 expect=accept got=accept :: accept: fase=pick,brazo=A,objeto=mug :: Arm A picked the mug.
+[OK ] a12 expect=accept got=accept :: accept: fase=place,brazo=B,objeto=mug :: ARM B, PLACE THE MUG.
+[OK ] a13 expect=accept got=accept :: accept: fase=set-down,brazo=A,objeto=mug :: Arm A: set-down the mug.
+[OK ] a14 expect=accept got=accept :: accept: fase=place,brazo=B,objeto=mug :: Arm B is placing the mug.
+[OK ] a15 expect=accept got=accept WARN=park :: accept: fase=pick,brazo=A,objeto=mug :: Arm A pick up the mug and park.
+[OK ] r01 expect=reject got=reject :: reject: ambiguous objeto: mug,plate :: Arm A pick the mug and the plate.
+[OK ] r02 expect=reject got=reject :: reject: ambiguous brazo: A,B :: Arm A and arm B pick the mug.
+[OK ] r03 expect=reject got=reject :: reject: ambiguous fase: pick,place :: Arm A pick and place the mug.
+[OK ] r04 expect=reject got=reject :: reject: missing fase (whole-task verb, no phase: move) :: Arm A move the mug to the relay.
+[OK ] r05 expect=reject got=reject :: reject: missing brazo :: Pick the mug from staging.
+[OK ] r06 expect=reject got=reject :: reject: missing objeto :: Arm A pick it up.
+[OK ] r07 expect=reject got=reject :: reject: out-of-grammar: cup; missing objeto :: Arm A pick the cup.
+[OK ] r08 expect=reject got=reject :: reject: out-of-grammar: spoon :: Arm B place the spoon on the plate.
+[OK ] r09 expect=reject got=reject :: reject: out-of-grammar: insert,peg,socket; missing fase; missing brazo; missing objeto :: Insert the peg into the socket.
+[OK ] r10 expect=reject got=reject :: reject: missing fase; missing brazo (whole-task verb, no phase: transfer) :: Transfer the mug from left staging to the right zone via the table relay.
+[OK ] r11 expect=reject got=reject :: reject: missing fase; missing brazo (whole-task verb, no phase: transfer) :: Transfer the plate from right staging to the left zone via the table relay.
+[OK ] r12 expect=reject got=reject :: reject: out-of-grammar: drawer,open; missing fase; missing objeto :: Arm B open the drawer.
+[OK ] r13 expect=reject got=reject :: reject: out-of-grammar: pour; missing fase :: Arm A pour the mug.
+[OK ] r14 expect=reject got=reject :: reject: negation out-of-grammar :: Arm A do not pick the mug.
+[OK ] r15 expect=reject got=reject :: reject: missing fase; missing brazo :: mug mug mug
+aceptadasOK/total: 15/15
+rechazadasOK/total: 15/15

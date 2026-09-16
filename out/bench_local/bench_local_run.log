@@ -1,0 +1,8 @@
+host cpu_model: AMD Ryzen 5 3600 6-Core Processor
+openvino: 2026.3.0-22451-8a17657b995-releases/2026/3
+model: /home/thelinconx/Proyectos/MAMBO-VLA-RC/out/export/act_full_v3_100k/model.xml
+niter=100 warmup=10 precision=FP32 device=CPU
+shapes: 4x[1,3,256,256] + [1,12]; async streams=4
+latency-sync: p50=68.10ms p95=71.53ms avg=68.37ms min=61.74ms max=83.53ms
+throughput-async: total=5917.5ms for 100 iters fps_agg=16.90 fps_per_stream=4.22 (est median per-request ~236.70ms)
+wrote /home/thelinconx/Proyectos/MAMBO-VLA-RC/out/bench_local/bench_local_cpu.json

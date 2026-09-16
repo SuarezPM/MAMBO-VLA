@@ -1,0 +1,482 @@
+[
+  {
+    "seed": 100,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 101,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 102,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 103,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 104,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 105,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 106,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 107,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 108,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 109,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 110,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 111,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 112,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 113,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 114,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 115,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 116,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 117,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 118,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  },
+  {
+    "seed": 119,
+    "mode": "preplaced",
+    "success_strict": true,
+    "success_frozen": true,
+    "steps": 0,
+    "forward_p50_ms": 0.0,
+    "forward_p95_ms": 0.0,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [
+      "pick",
+      "set-down",
+      "handover",
+      "place"
+    ],
+    "disturbed": false,
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+  }
+]

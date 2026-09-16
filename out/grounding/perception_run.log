@@ -1,0 +1,6 @@
+intrinsics: cam=overhead fovy=45.0deg f=309.019px cx=cy=127.5
+oracle-mask: geom=mug_geom id=25 pixels=357 (STAND-IN de detector, GT del sim)
+gt=[-0.1200,0.0200,0.7940] est=[-0.1174,0.0209,0.8233]
+err_est_xy=2.77mm err_est_3d=29.41mm reproj_selfcheck=0.81px
+baseline ingenuo centro-mesa xy=(0.0, 0.07) err_base_xy=130.00mm
+verdict: SHIP (stride honesto: <= baseline con mascara oracle declarada)

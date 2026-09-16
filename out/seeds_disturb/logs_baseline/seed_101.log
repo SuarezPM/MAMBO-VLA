@@ -1,0 +1,2 @@
+seed 101 [baseline]: re-perceive t=0 mug_xy=[-0.1007, 0.0374] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+wall_s=0.7 result={'seed': 101, 'mode': 'baseline', 'success_strict': False, 'success_frozen': False, 'steps': 9000, 'forward_p50_ms': 24.0003, 'forward_p95_ms': 27.2763, 'exec_steps': 50, 'retries': {'pick': 0, 'set-down': 0, 'handover': 0, 'place': 0}, 'skipped': [], 'disturbed': False, 'mug_moved_mm': 67.0, 'note': 'repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)'}

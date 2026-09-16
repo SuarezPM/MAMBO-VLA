@@ -1,0 +1,402 @@
+[
+  {
+    "seed": 100,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 25.1525,
+    "forward_p95_ms": 192.9782,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 86.1,
+    "note": "repair rollout disturb: no STRICT place (mug moved 86mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 101,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.4278,
+    "forward_p95_ms": 25.5048,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 99.1,
+    "note": "repair rollout disturb: no STRICT place (mug moved 99mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 102,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.9634,
+    "forward_p95_ms": 30.191,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 43.2,
+    "note": "repair rollout disturb: no STRICT place (mug moved 43mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 103,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.0474,
+    "forward_p95_ms": 24.4767,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 156.5,
+    "note": "repair rollout disturb: no STRICT place (mug moved 156mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 104,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.9784,
+    "forward_p95_ms": 41.3806,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 66.5,
+    "note": "repair rollout disturb: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 105,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.4916,
+    "forward_p95_ms": 25.8014,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 194.4,
+    "note": "repair rollout disturb: no STRICT place (mug moved 194mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 106,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.8641,
+    "forward_p95_ms": 24.2842,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 80.7,
+    "note": "repair rollout disturb: no STRICT place (mug moved 81mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 107,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.3946,
+    "forward_p95_ms": 26.6658,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 438.0,
+    "note": "repair rollout disturb: no STRICT place (mug moved 438mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 108,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 20.8981,
+    "forward_p95_ms": 24.7654,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 197.6,
+    "note": "repair rollout disturb: no STRICT place (mug moved 198mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 109,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.748,
+    "forward_p95_ms": 25.0845,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 48.4,
+    "note": "repair rollout disturb: no STRICT place (mug moved 48mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 110,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.47,
+    "forward_p95_ms": 26.5642,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 69.6,
+    "note": "repair rollout disturb: no STRICT place (mug moved 70mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 111,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.8476,
+    "forward_p95_ms": 27.4949,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 45.6,
+    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 112,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.4349,
+    "forward_p95_ms": 26.4166,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 45.7,
+    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 113,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.4997,
+    "forward_p95_ms": 26.1816,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 182.3,
+    "note": "repair rollout disturb: no STRICT place (mug moved 182mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 114,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.8749,
+    "forward_p95_ms": 28.7578,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 216.7,
+    "note": "repair rollout disturb: no STRICT place (mug moved 217mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 115,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.9127,
+    "forward_p95_ms": 23.9465,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 100.7,
+    "note": "repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 116,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.5803,
+    "forward_p95_ms": 28.6141,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 312.4,
+    "note": "repair rollout disturb: no STRICT place (mug moved 312mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 117,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.7005,
+    "forward_p95_ms": 26.4089,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 40.0,
+    "note": "repair rollout disturb: no STRICT place (mug moved 40mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 118,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.1375,
+    "forward_p95_ms": 29.2776,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 55.5,
+    "note": "repair rollout disturb: no STRICT place (mug moved 55mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 119,
+    "mode": "disturb",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.8068,
+    "forward_p95_ms": 26.1437,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": true,
+    "mug_moved_mm": 59.5,
+    "note": "repair rollout disturb: no STRICT place (mug moved 60mm, retries=0, frozen_place=False)"
+  }
+]

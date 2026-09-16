@@ -1,0 +1,13 @@
+stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+exec_steps=50 (frozen, logged per row)
+mode=disturb hash_file=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/seeds_disturb/seed_hashes_disturb.json
+MAX_RETRIES=2 per phase; STRICT=3cm+yaw15+upright+released (NEW RUNS ONLY)
+Loading weights from local directory
+seed 100 [disturb]: re-perceive t=0 mug_xy=[-0.1006, 0.033] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 100 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0546, 0.0923] (queue cleared)
+seed 100: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 75mm, retries=0, frozen_place=False)
+total_wall_s=1.0
+seed | strict | frozen | steps | exec | note
+ 100 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 75mm, retries=0, frozen_place=False)
+summary disturb: 0/1 STRICT, 0 INFRA

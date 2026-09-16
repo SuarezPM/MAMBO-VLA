@@ -1,0 +1,45 @@
+== [1/5] setup ==
+Python 3.10.21
+setup: OK (.venv presente, sin reinstalar por defecto)
+== [2/5] self-check ==
+python: 3.10.21
+mujoco: OK (found 3.12.0, pinned 3.12.0)
+lerobot: OK (found 0.4.4, pinned 0.4.4)
+openvino: OK (found 2026.3.0, pinned 2026.3.0)
+torch: found 2.10.0+cu128
+torch.cuda.is_available(): True
+ALL PRESENT
+== [3/5] export(check, sin re-exportar) ==
+parity max_err=1.192093e-06 pass=True ir_size_mb=66.658
+export(check): OK (IR existente verificado, no re-exportado)
+== [4/5] bench (warmup10+n100, CPU FP32, este host) ==
+host cpu_model: AMD Ryzen 5 3600 6-Core Processor
+openvino: 2026.3.0-22451-8a17657b995-releases/2026/3
+model: /home/thelinconx/Proyectos/MAMBO-VLA-RC/out/export/act_full_v3_100k/model.xml
+niter=100 warmup=10 precision=FP32 device=CPU
+shapes: 4x[1,3,256,256] + [1,12]; async streams=4
+latency-sync: p50=68.10ms p95=71.53ms avg=68.37ms min=61.74ms max=83.53ms
+throughput-async: total=5917.5ms for 100 iters fps_agg=16.90 fps_per_stream=4.22 (est median per-request ~236.70ms)
+wrote /home/thelinconx/Proyectos/MAMBO-VLA-RC/out/bench_local/bench_local_cpu.json
+README markers actualizados
+| Fuente (host) | Metrica | Valor | Log citado |
+|---|---|---|---|
+| Local CPU — AMD Ryzen 5 3600 6-Core Processor (este host, CPU/FP32) | latency-sync p50/p95 | 68.1 / 71.53 ms (p50/p95, niter 100+warmup 10) | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
+| Local CPU — AMD Ryzen 5 3600 6-Core Processor (este host, CPU/FP32) | throughput-async agg/per-stream | 16.9 agg / 4.22 per-stream FPS | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
+| Xeon E-2386G congelado (otro host, no este) | latency-sync median / throughput | 40.80 ms / 24.51 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` |
+| Xeon E-2386G congelado (otro host, no este) | throughput-async median / throughput agg (6.96/stream = 27.85/4) | 143.66 ms / 27.85 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` |
+| Export FP32 IR `act_full_v3_100k` | tamano / paridad PyTorch | 66.658 MB, max_err 1.192093e-06 (tol 0.001, pass=True) | `out/export/act_full_v3_100k/parity.json` + `export.log` |
+| OOD 60-79 v3-100k (filed, no re-abierto) | mean | ` **1/20** — seed 65 places; flings at 67, 78 ` | `out/ood/OOD_RESULTS_60_79.md` |
+| OOD 80-99 v3-100k (filed, no re-abierto) | mean | ` **1/20** — seed 93 places; fling at 83 ` | `out/ood/OOD_RESULTS_80_99.md` |
+| Seeds 0-9 (congeladas, PROHIBIDO re-evaluar en Carril A) | vehicle/random/swap | ver README Sec Result (3/10 vs 0/10 vs 0/10, transcrito) — no re-run aqui | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 4 |
+
+_Local = medido en este host (ver `cpu_model` en JSON). Xeon = cifras congeladas de otro host, citadas no mezcladas. OOD/seeds 0-9 no re-evaluados en este carril._
+
+bench: OK (JSON + tabla README actualizada)
+== [5/5] eval smoke 1 seed (swap refusal, seed 60, sin tocar 0-9) ==
+instruction: Transfer the plate from right staging to the left zone via the table relay.
+seed | success | steps | forward_p50_ms | note
+  60 | False | 0 | 0.0 | router refused (out-of-grammar)
+swap control: success collapses to 0 (refusal, arms never moved)
+eval-smoke: OK (swap refusal, 0 steps, carril respetado)
+QUICKSTART GREEN

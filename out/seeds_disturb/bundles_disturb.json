@@ -1,0 +1,702 @@
+{
+  "100": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.10062331678177827,
+      0.03300759746706891
+    ],
+    "plate_xy": [
+      0.19292137949431665,
+      0.11149302774463479
+    ],
+    "mug_color": [
+      0.3679,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.557,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0306,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "101": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.10068524519640581,
+      0.03739749611868911
+    ],
+    "plate_xy": [
+      0.16799378014682145,
+      0.08230546176482471
+    ],
+    "mug_color": [
+      0.3181,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.5189,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.8172,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "102": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.13038972963879109,
+      0.014735845605227022
+    ],
+    "plate_xy": [
+      0.18476465418933324,
+      0.08508917953635885
+    ],
+    "mug_color": [
+      0.3331,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.5033,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0939,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "103": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.12829989656795107,
+      0.023420715759752447
+    ],
+    "plate_xy": [
+      0.1668215209392399,
+      0.08333437534397943
+    ],
+    "mug_color": [
+      0.3894,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.6052,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9321,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "104": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.13506127011842614,
+      0.008550257026036913
+    ],
+    "plate_xy": [
+      0.16183617217983137,
+      0.10394122502824418
+    ],
+    "mug_color": [
+      0.3824,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.581,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9816,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "105": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.1173343577298101,
+      0.0035518888473848598
+    ],
+    "plate_xy": [
+      0.17225858670970792,
+      0.11759299205565579
+    ],
+    "mug_color": [
+      0.3456,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4871,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9151,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "106": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.10936802039821268,
+      0.032491338343076256
+    ],
+    "plate_xy": [
+      0.1732229104887257,
+      0.08710526527552005
+    ],
+    "mug_color": [
+      0.3731,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.559,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0105,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "107": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.10171253771128978,
+      0.019885979102121826
+    ],
+    "plate_xy": [
+      0.1693148832599892,
+      0.10793074877297575
+    ],
+    "mug_color": [
+      0.2868,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4269,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9629,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "108": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.12682289000897398,
+      0.0346699671698908
+    ],
+    "plate_xy": [
+      0.1923798105491632,
+      0.10525477041125691
+    ],
+    "mug_color": [
+      0.3563,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.6092,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0943,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "109": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.10163957397774834,
+      0.028617234049289012
+    ],
+    "plate_xy": [
+      0.1766576759584614,
+      0.09052088422604204
+    ],
+    "mug_color": [
+      0.3933,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4322,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.8513,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "110": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.11180092643951742,
+      0.02516149080972629
+    ],
+    "plate_xy": [
+      0.17236550488556118,
+      0.11244280160790901
+    ],
+    "mug_color": [
+      0.2823,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4637,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.8449,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "111": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.11774868938730573,
+      0.026986420317845088
+    ],
+    "plate_xy": [
+      0.16988613718551016,
+      0.1103158005898199
+    ],
+    "mug_color": [
+      0.3554,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4344,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9204,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "112": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.12309721548089754,
+      0.038767537578749414
+    ],
+    "plate_xy": [
+      0.16372556069460764,
+      0.11475357984574308
+    ],
+    "mug_color": [
+      0.3383,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4549,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0401,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "113": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.13911423519863136,
+      0.031490240175192
+    ],
+    "plate_xy": [
+      0.17168285301617706,
+      0.10745840931293177
+    ],
+    "mug_color": [
+      0.2762,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.5481,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.1111,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "114": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.1220215686924974,
+      0.03471589452630922
+    ],
+    "plate_xy": [
+      0.16388205452049098,
+      0.11699146987091812
+    ],
+    "mug_color": [
+      0.2973,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4662,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0063,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "115": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.12569043158920365,
+      0.013157959109169393
+    ],
+    "plate_xy": [
+      0.18827089453279322,
+      0.09803295828095321
+    ],
+    "mug_color": [
+      0.2778,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.5581,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9432,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "116": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.11220573969615578,
+      0.0363362263155075
+    ],
+    "plate_xy": [
+      0.17538062487724182,
+      0.09886176476661808
+    ],
+    "mug_color": [
+      0.3588,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4787,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.8073,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "117": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.1360918772185979,
+      0.015839895719843407
+    ],
+    "plate_xy": [
+      0.17363273674647395,
+      0.08146280507559844
+    ],
+    "mug_color": [
+      0.3297,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4182,
+      0.76,
+      1.0
+    ],
+    "lighting": 0.9043,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "118": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.13619369294059536,
+      0.028038575197743488
+    ],
+    "plate_xy": [
+      0.19974761329059493,
+      0.09303753863463547
+    ],
+    "mug_color": [
+      0.2916,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4764,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.0645,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  },
+  "119": {
+    "layout": "dual_so101_dinner shelf-only, no drawer",
+    "mug_xy": [
+      -0.13102859087778818,
+      0.03672699194204294
+    ],
+    "plate_xy": [
+      0.19713740794532292,
+      0.09888131762025125
+    ],
+    "mug_color": [
+      0.3757,
+      0.73,
+      0.69,
+      1.0
+    ],
+    "plate_color": [
+      0.33,
+      0.4295,
+      0.76,
+      1.0
+    ],
+    "lighting": 1.011,
+    "instruction": "Transfer the mug from left staging to the right zone via the table relay.",
+    "relay_point": [
+      0.0,
+      -0.1,
+      0.76
+    ],
+    "destination": [
+      0.18,
+      -0.01,
+      0.76
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+2026-09-16T18:36:28Z START disturb 100-119
+stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+exec_steps=50 (frozen, logged per row)
+mode=disturb hash_file=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/seeds_disturb/seed_hashes_disturb.json
+MAX_RETRIES=2 per phase; STRICT=3cm+yaw15+upright+released (NEW RUNS ONLY)
+Loading weights from local directory
+seed 100 [disturb]: re-perceive t=0 mug_xy=[-0.1006, 0.033] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 100 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0366, 0.0906] (queue cleared)
+seed 100: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 86mm, retries=0, frozen_place=False)
+seed 101 [disturb]: re-perceive t=0 mug_xy=[-0.1007, 0.0374] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 101 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.014, 0.0851] (queue cleared)
+seed 101: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 99mm, retries=0, frozen_place=False)
+seed 102 [disturb]: re-perceive t=0 mug_xy=[-0.1304, 0.0147] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 102 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0872, 0.0139] (queue cleared)
+seed 102: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 43mm, retries=0, frozen_place=False)
+seed 103 [disturb]: re-perceive t=0 mug_xy=[-0.1283, 0.0234] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 103 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[0.0107, 0.0952] (queue cleared)
+seed 103: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 156mm, retries=0, frozen_place=False)
+seed 104 [disturb]: re-perceive t=0 mug_xy=[-0.1351, 0.0086] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 104 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.1105, 0.0233] (queue cleared)
+seed 104: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+seed 105 [disturb]: re-perceive t=0 mug_xy=[-0.1173, 0.0036] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 105 [disturb]: phase pick: VERIFIED @step=575 xy=[-0.1229, -0.0045] sep=0.0109
+seed 105 [disturb]: phase handover: VERIFIED @step=1675 xy=[-0.019, -0.0968] sep=0.0981
+seed 105 [disturb]: phase set-down: VERIFIED @step=2100 xy=[-0.0025, -0.1058] sep=0.0200
+seed 105 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[0.0377, -0.1123] (queue cleared)
+seed 105: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 194mm, retries=0, frozen_place=False)
+seed 106 [disturb]: re-perceive t=0 mug_xy=[-0.1094, 0.0325] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 106 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.1363, 0.1083] (queue cleared)
+seed 106: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 81mm, retries=0, frozen_place=False)
+seed 107 [disturb]: re-perceive t=0 mug_xy=[-0.1017, 0.0199] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 107 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[0.1552, 0.3745] (queue cleared)
+seed 107: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 438mm, retries=0, frozen_place=False)
+seed 108 [disturb]: re-perceive t=0 mug_xy=[-0.1268, 0.0347] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 108 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.3223, 0.0346] (queue cleared)
+seed 108: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 198mm, retries=0, frozen_place=False)
+seed 109 [disturb]: re-perceive t=0 mug_xy=[-0.1016, 0.0286] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 109 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0533, 0.0287] (queue cleared)
+seed 109: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 48mm, retries=0, frozen_place=False)
+seed 110 [disturb]: re-perceive t=0 mug_xy=[-0.1118, 0.0252] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 110 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0706, 0.0818] (queue cleared)
+seed 110: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 70mm, retries=0, frozen_place=False)
+seed 111 [disturb]: re-perceive t=0 mug_xy=[-0.1177, 0.027] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 111 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0722, 0.0272] (queue cleared)
+seed 111: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)
+seed 112 [disturb]: re-perceive t=0 mug_xy=[-0.1231, 0.0388] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 112 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0769, 0.04] (queue cleared)
+seed 112: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)
+seed 113 [disturb]: re-perceive t=0 mug_xy=[-0.1391, 0.0315] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 113 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.1003, 0.0437] (queue cleared)
+seed 113: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 182mm, retries=0, frozen_place=False)
+seed 114 [disturb]: re-perceive t=0 mug_xy=[-0.122, 0.0347] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 114 [disturb]: phase pick: VERIFIED @step=1650 xy=[-0.1229, 0.0349] sep=0.0177
+seed 114 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[0.0944, 0.0756] (queue cleared)
+seed 114: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 217mm, retries=0, frozen_place=False)
+seed 115 [disturb]: re-perceive t=0 mug_xy=[-0.1257, 0.0132] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 115 [disturb]: phase pick: VERIFIED @step=600 xy=[-0.1322, 0.0171] sep=0.0287
+seed 115 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0718, 0.0979] (queue cleared)
+seed 115: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)
+seed 116 [disturb]: re-perceive t=0 mug_xy=[-0.1122, 0.0363] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 116 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.3848, 0.1827] (queue cleared)
+seed 116: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 312mm, retries=0, frozen_place=False)
+seed 117 [disturb]: re-perceive t=0 mug_xy=[-0.1361, 0.0158] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 117 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.1352, 0.0564] (queue cleared)
+seed 117: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 40mm, retries=0, frozen_place=False)
+seed 118 [disturb]: re-perceive t=0 mug_xy=[-0.1362, 0.028] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 118 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.1153, 0.0795] (queue cleared)
+seed 118: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 55mm, retries=0, frozen_place=False)
+seed 119 [disturb]: re-perceive t=0 mug_xy=[-0.131, 0.0367] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 119 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0772, 0.0547] (queue cleared)
+seed 119: strict=False frozen=False steps=9000 exec=50 | repair rollout disturb: no STRICT place (mug moved 60mm, retries=0, frozen_place=False)
+total_wall_s=14.7
+seed | strict | frozen | steps | exec | note
+ 100 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 86mm, retries=0, frozen_place=False)
+ 101 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 99mm, retries=0, frozen_place=False)
+ 102 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 43mm, retries=0, frozen_place=False)
+ 103 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 156mm, retries=0, frozen_place=False)
+ 104 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+ 105 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 194mm, retries=0, frozen_place=False)
+ 106 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 81mm, retries=0, frozen_place=False)
+ 107 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 438mm, retries=0, frozen_place=False)
+ 108 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 198mm, retries=0, frozen_place=False)
+ 109 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 48mm, retries=0, frozen_place=False)
+ 110 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 70mm, retries=0, frozen_place=False)
+ 111 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)
+ 112 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)
+ 113 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 182mm, retries=0, frozen_place=False)
+ 114 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 217mm, retries=0, frozen_place=False)
+ 115 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)
+ 116 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 312mm, retries=0, frozen_place=False)
+ 117 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 40mm, retries=0, frozen_place=False)
+ 118 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 55mm, retries=0, frozen_place=False)
+ 119 | False | False | 9000 | 50 | repair rollout disturb: no STRICT place (mug moved 60mm, retries=0, frozen_place=False)
+summary disturb: 0/20 STRICT, 0 INFRA
+EXIT:0

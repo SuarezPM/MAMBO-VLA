@@ -1,0 +1,402 @@
+[
+  {
+    "seed": 100,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.7046,
+    "forward_p95_ms": 190.8684,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 128.6,
+    "note": "repair rollout baseline: no STRICT place (mug moved 129mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 101,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.0003,
+    "forward_p95_ms": 27.2763,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 67.0,
+    "note": "repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 102,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.9089,
+    "forward_p95_ms": 24.136,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 170.0,
+    "note": "repair rollout baseline: no STRICT place (mug moved 170mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 103,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.3167,
+    "forward_p95_ms": 27.0032,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 259.4,
+    "note": "repair rollout baseline: no STRICT place (mug moved 259mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 104,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.7635,
+    "forward_p95_ms": 25.3589,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 343.0,
+    "note": "repair rollout baseline: no STRICT place (mug moved 343mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 105,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": true,
+    "steps": 9000,
+    "forward_p50_ms": 23.1487,
+    "forward_p95_ms": 25.3292,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 298.7,
+    "note": "repair rollout baseline: no STRICT place (mug moved 299mm, retries=0, frozen_place=True)"
+  },
+  {
+    "seed": 106,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.1181,
+    "forward_p95_ms": 25.7076,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 27.2,
+    "note": "repair rollout baseline: no STRICT place (mug moved 27mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 107,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.051,
+    "forward_p95_ms": 25.7275,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 416.9,
+    "note": "repair rollout baseline: no STRICT place (mug moved 417mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 108,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.7386,
+    "forward_p95_ms": 27.0599,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 2,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 2723.4,
+    "note": "repair rollout baseline: no STRICT place (mug moved 2723mm, retries=2, frozen_place=False)"
+  },
+  {
+    "seed": 109,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.4141,
+    "forward_p95_ms": 24.9439,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 67.3,
+    "note": "repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 110,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.7484,
+    "forward_p95_ms": 25.9343,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 371.5,
+    "note": "repair rollout baseline: no STRICT place (mug moved 371mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 111,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.833,
+    "forward_p95_ms": 28.1182,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 28.3,
+    "note": "repair rollout baseline: no STRICT place (mug moved 28mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 112,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.9499,
+    "forward_p95_ms": 27.7444,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 11.8,
+    "note": "repair rollout baseline: no STRICT place (mug moved 12mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 113,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.9713,
+    "forward_p95_ms": 24.8232,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 58.8,
+    "note": "repair rollout baseline: no STRICT place (mug moved 59mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 114,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.9765,
+    "forward_p95_ms": 27.8481,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 72.6,
+    "note": "repair rollout baseline: no STRICT place (mug moved 73mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 115,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.3791,
+    "forward_p95_ms": 23.7101,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 151.1,
+    "note": "repair rollout baseline: no STRICT place (mug moved 151mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 116,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.4376,
+    "forward_p95_ms": 29.2628,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 2,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 3103.2,
+    "note": "repair rollout baseline: no STRICT place (mug moved 3103mm, retries=2, frozen_place=False)"
+  },
+  {
+    "seed": 117,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.056,
+    "forward_p95_ms": 28.4499,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 65.7,
+    "note": "repair rollout baseline: no STRICT place (mug moved 66mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 118,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.3262,
+    "forward_p95_ms": 25.7429,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 64.3,
+    "note": "repair rollout baseline: no STRICT place (mug moved 64mm, retries=0, frozen_place=False)"
+  },
+  {
+    "seed": 119,
+    "mode": "baseline",
+    "success_strict": false,
+    "success_frozen": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.4486,
+    "forward_p95_ms": 24.5353,
+    "exec_steps": 50,
+    "retries": {
+      "pick": 0,
+      "set-down": 0,
+      "handover": 0,
+      "place": 0
+    },
+    "skipped": [],
+    "disturbed": false,
+    "mug_moved_mm": 20.6,
+    "note": "repair rollout baseline: no STRICT place (mug moved 21mm, retries=0, frozen_place=False)"
+  }
+]

@@ -1,0 +1,30 @@
+{"expect": "accept", "id": "a01", "note": "canonical pick/A/mug", "text": "Arm A pick the mug."}
+{"expect": "accept", "id": "a02", "note": "alias pick up + left arm", "text": "Left arm picks up the mug from staging."}
+{"expect": "accept", "id": "a03", "note": "alias grasp + object plate", "text": "Arm B grasp the plate."}
+{"expect": "accept", "id": "a04", "note": "alias set down, spaced form", "text": "Arm A set down the mug at the relay."}
+{"expect": "accept", "id": "a05", "note": "sets down 3rd person + right arm", "text": "Right arm sets down the mug at the relay."}
+{"expect": "accept", "id": "a06", "note": "alias hand over, spaced form", "text": "Arm A hand over the mug at the relay."}
+{"expect": "accept", "id": "a07", "note": "canonical handover, B side", "text": "Arm B handover the mug at the relay."}
+{"expect": "accept", "id": "a08", "note": "alias hands off + plate", "text": "Right arm hands off the plate at the relay."}
+{"expect": "accept", "id": "a09", "note": "canonical place at destination", "text": "Arm B place the mug at the destination."}
+{"expect": "accept", "id": "a10", "note": "places 3rd person + right zone", "text": "Arm B places the plate in the right zone."}
+{"expect": "accept", "id": "a11", "note": "past tense picked", "text": "Arm A picked the mug."}
+{"expect": "accept", "id": "a12", "note": "uppercase and punctuation", "text": "ARM B, PLACE THE MUG."}
+{"expect": "accept", "id": "a13", "note": "canonical hyphen + colon", "text": "Arm A: set-down the mug."}
+{"expect": "accept", "id": "a14", "note": "progressive placing", "text": "Arm B is placing the mug."}
+{"expect": "accept", "id": "a15", "note": "extra adjunct ignored (park)", "text": "Arm A pick up the mug and park."}
+{"expect": "reject", "id": "r01", "note": "ambiguous: two objects", "text": "Arm A pick the mug and the plate."}
+{"expect": "reject", "id": "r02", "note": "ambiguous: two arms", "text": "Arm A and arm B pick the mug."}
+{"expect": "reject", "id": "r03", "note": "ambiguous: two phases", "text": "Arm A pick and place the mug."}
+{"expect": "reject", "id": "r04", "note": "missing phase: whole-task verb", "text": "Arm A move the mug to the relay."}
+{"expect": "reject", "id": "r05", "note": "missing arm", "text": "Pick the mug from staging."}
+{"expect": "reject", "id": "r06", "note": "missing object: pronoun without antecedent", "text": "Arm A pick it up."}
+{"expect": "reject", "id": "r07", "note": "out-of-grammar: cup", "text": "Arm A pick the cup."}
+{"expect": "reject", "id": "r08", "note": "out-of-grammar: spoon", "text": "Arm B place the spoon on the plate."}
+{"expect": "reject", "id": "r09", "note": "out-of-grammar swap-style peg/socket", "text": "Insert the peg into the socket."}
+{"expect": "reject", "id": "r10", "note": "relay deployment sentence: no phase/arm at critic level (router accepts it, not the critic)", "text": "Transfer the mug from left staging to the right zone via the table relay."}
+{"expect": "reject", "id": "r11", "note": "swap sentence: same rejection at critic level", "text": "Transfer the plate from right staging to the left zone via the table relay."}
+{"expect": "reject", "id": "r12", "note": "out-of-grammar: open/drawer", "text": "Arm B open the drawer."}
+{"expect": "reject", "id": "r13", "note": "out-of-grammar: pour", "text": "Arm A pour the mug."}
+{"expect": "reject", "id": "r14", "note": "negation out-of-grammar", "text": "Arm A do not pick the mug."}
+{"expect": "reject", "id": "r15", "note": "gibberish: no phase or arm", "text": "mug mug mug"}

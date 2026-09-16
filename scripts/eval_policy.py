@@ -33,8 +33,10 @@ frozen behavior preserved); checkpoints trained on recomputed stats (v2/v3,
 different visual scale) must pass their own root or the policy is denormalized
 through the wrong statistics. H-heldout: seeds outside frozen 0-9
 (EXTRA_SEEDS 10-29, wider jitter, truly held out) build via
-seed_bundle_extra and verify against --hash-file-extra (default
-out/seeds_extra/seed_hashes.json). Diagnostic only.
+seed_bundle_extra and verify against --hash-file-extra; OOD_SEEDS 60-79
+via seed_bundle_ood against --hash-file-ood (defaults
+out/seeds_extra/seed_hashes.json, out/seeds_ood/seed_hashes_ood.json).
+Diagnostic only.
 
 Usage:
   .venv/bin/python scripts/eval_policy.py --checkpoint out/checkpoints/act_smoke --seeds 0-1
@@ -66,6 +68,7 @@ from mambo_vla_rc.bench_stub import print_table
 from mambo_vla_rc.seed_freeze import SEEDS, freeze_table, hash_bundle
 from run_seeds import FRAME_EVERY, HOME, INSTRUCTION, JAW_OPEN, SUCCESS_RADIUS, seed_bundle
 from run_seeds_extra import EXTRA_SEEDS, seed_bundle_extra
+from run_seeds_ood import OOD_SEEDS, seed_bundle_ood
 
 from lerobot.policies.act.modeling_act import ACTPolicy
 
@@ -277,6 +280,10 @@ def main() -> int:
                     default=str(ROOT / "out" / "seeds_extra" / "seed_hashes.json"),
                     help="hash file for held-out seeds 10-29 only (H-heldout); "
                     "base seeds always verify against out/seeds/seed_hashes.json")
+    ap.add_argument("--hash-file-ood",
+                    default=str(ROOT / "out" / "seeds_ood" / "seed_hashes_ood.json"),
+                    help="hash file for OOD seeds 60-79 only (H-heldout); "
+                    "defaults preserve all frozen behavior")
     args = ap.parse_args()
     ckpt = Path(args.checkpoint)
     pre_dir = ckpt / "pretrained_model"
@@ -305,12 +312,18 @@ def main() -> int:
             assert hashes[s] == saved[s], f"seed {s} hash mismatch"
         else:
             import json as _json
-            assert s in EXTRA_SEEDS, f"seed {s} outside held-out range {EXTRA_SEEDS}"
+            if s in EXTRA_SEEDS:
+                gen, hf = seed_bundle_extra, args.hash_file_extra
+            elif s in OOD_SEEDS:
+                gen, hf = seed_bundle_ood, args.hash_file_ood
+            else:
+                raise AssertionError(
+                    f"seed {s} outside known ranges 0-9/10-29/60-79")
             extra_saved = {int(k): v for k, v in _json.loads(
-                Path(args.hash_file_extra).read_text()).items()}
-            assert hash_bundle(seed_bundle_extra(s)) == extra_saved[s], \
+                Path(hf).read_text()).items()}
+            assert hash_bundle(gen(s)) == extra_saved[s], \
                 f"seed {s} hash mismatch"
-            bundles[s] = seed_bundle_extra(s)
+            bundles[s] = gen(s)
     print(f"stats_root={args.stats_root}", flush=True)
     _warm = warmup_egl(bundles[seeds[0]])
     if args.random:

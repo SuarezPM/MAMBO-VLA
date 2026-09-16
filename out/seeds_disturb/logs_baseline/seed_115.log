@@ -1,0 +1,3 @@
+seed 115 [baseline]: re-perceive t=0 mug_xy=[-0.1257, 0.0132] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 115 [baseline]: phase pick: VERIFIED @step=600 xy=[-0.1324, 0.017] sep=0.0264
+wall_s=0.7 result={'seed': 115, 'mode': 'baseline', 'success_strict': False, 'success_frozen': False, 'steps': 9000, 'forward_p50_ms': 22.3791, 'forward_p95_ms': 23.7101, 'exec_steps': 50, 'retries': {'pick': 0, 'set-down': 0, 'handover': 0, 'place': 0}, 'skipped': [], 'disturbed': False, 'mug_moved_mm': 151.1, 'note': 'repair rollout baseline: no STRICT place (mug moved 151mm, retries=0, frozen_place=False)'}

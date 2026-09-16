@@ -1,0 +1,507 @@
+2026-09-16T18:36:52Z START baseline 100-119
+stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+exec_steps=50 (frozen, logged per row)
+mode=baseline hash_file=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/seeds_disturb/seed_hashes_disturb.json
+MAX_RETRIES=2 per phase; STRICT=3cm+yaw15+upright+released (NEW RUNS ONLY)
+Loading weights from local directory
+seed 100 [baseline]: re-perceive t=0 mug_xy=[-0.1006, 0.033] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 100: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 129mm, retries=0, frozen_place=False)
+seed 101 [baseline]: re-perceive t=0 mug_xy=[-0.1007, 0.0374] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 101: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+seed 102 [baseline]: re-perceive t=0 mug_xy=[-0.1304, 0.0147] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 102: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 170mm, retries=0, frozen_place=False)
+seed 103 [baseline]: re-perceive t=0 mug_xy=[-0.1283, 0.0234] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 103: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 259mm, retries=0, frozen_place=False)
+seed 104 [baseline]: re-perceive t=0 mug_xy=[-0.1351, 0.0086] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 104: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 343mm, retries=0, frozen_place=False)
+seed 105 [baseline]: re-perceive t=0 mug_xy=[-0.1173, 0.0036] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 105 [baseline]: phase pick: VERIFIED @step=600 xy=[-0.1216, 0.0054] sep=0.0376
+seed 105 [baseline]: phase handover: VERIFIED @step=1675 xy=[-0.0187, -0.0959] sep=0.0992
+seed 105 [baseline]: phase set-down: VERIFIED @step=2125 xy=[-0.0029, -0.1055] sep=0.0119
+seed 105: strict=False frozen=True steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 299mm, retries=0, frozen_place=True)
+seed 106 [baseline]: re-perceive t=0 mug_xy=[-0.1094, 0.0325] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 106: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 27mm, retries=0, frozen_place=False)
+seed 107 [baseline]: re-perceive t=0 mug_xy=[-0.1017, 0.0199] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 107: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 417mm, retries=0, frozen_place=False)
+seed 108 [baseline]: re-perceive t=0 mug_xy=[-0.1268, 0.0347] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 108 [baseline]: REPAIR knocked-off @step=3825: mug z=0.7245 xy=[-0.5181, -0.0145] -> re-queue (phase pick retry 1/2)
+seed 108 [baseline]: REPAIR knocked-off @step=3850: mug z=0.6604 xy=[-0.53, -0.0152] -> re-queue (phase pick retry 2/2)
+seed 108 [baseline]: REPAIR knocked-off @step=3875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=3900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=3925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=3950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=3975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4000: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4025: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4050: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4075: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4100: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4125: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4150: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4175: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4200: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4225: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4250: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4275: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4300: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4325: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4350: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4375: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4400: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4425: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4450: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4475: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4500: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4525: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4550: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4575: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4600: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4625: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4650: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4675: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4700: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4725: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4750: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4775: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4800: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4825: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4850: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=4975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5000: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5025: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5050: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5075: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5100: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5125: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5150: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5175: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5200: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5225: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5250: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5275: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5300: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5325: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5350: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5375: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5400: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5425: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5450: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5475: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5500: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5525: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5550: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5575: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5600: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5625: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5650: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5675: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5700: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5725: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5750: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5775: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5800: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5825: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5850: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=5975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6000: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6025: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6050: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6075: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6100: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6125: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6150: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6175: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6200: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6225: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6250: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6275: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6300: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6325: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6350: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6375: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6400: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6425: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6450: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6475: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6500: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6525: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6550: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6575: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6600: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6625: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6650: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6675: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6700: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6725: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6750: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6775: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6800: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6825: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6850: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=6975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7000: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7025: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7050: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7075: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7100: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7125: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7150: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7175: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7200: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7225: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7250: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7275: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7300: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7325: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7350: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7375: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7400: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7425: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7450: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7475: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7500: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7525: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7550: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7575: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7600: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7625: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7650: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7675: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7700: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7725: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7750: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7775: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7800: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7825: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7850: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=7975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8000: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8025: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8050: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8075: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8100: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8125: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8150: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8175: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8200: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8225: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8250: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8275: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8300: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8325: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8350: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8375: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8400: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8425: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8450: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8475: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8500: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8525: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8550: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8575: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8600: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8625: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8650: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8675: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8700: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8725: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8750: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8775: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8800: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8825: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8850: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8875: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8900: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8925: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8950: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=8975: phase pick retries exhausted (2), continuing without re-queue
+seed 108 [baseline]: REPAIR knocked-off @step=9000: phase pick retries exhausted (2), continuing without re-queue
+seed 108: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 2723mm, retries=2, frozen_place=False)
+seed 109 [baseline]: re-perceive t=0 mug_xy=[-0.1016, 0.0286] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 109: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+seed 110 [baseline]: re-perceive t=0 mug_xy=[-0.1118, 0.0252] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 110: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 371mm, retries=0, frozen_place=False)
+seed 111 [baseline]: re-perceive t=0 mug_xy=[-0.1177, 0.027] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 111: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 28mm, retries=0, frozen_place=False)
+seed 112 [baseline]: re-perceive t=0 mug_xy=[-0.1231, 0.0388] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 112: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 12mm, retries=0, frozen_place=False)
+seed 113 [baseline]: re-perceive t=0 mug_xy=[-0.1391, 0.0315] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 113: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 59mm, retries=0, frozen_place=False)
+seed 114 [baseline]: re-perceive t=0 mug_xy=[-0.122, 0.0347] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 114: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 73mm, retries=0, frozen_place=False)
+seed 115 [baseline]: re-perceive t=0 mug_xy=[-0.1257, 0.0132] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 115 [baseline]: phase pick: VERIFIED @step=600 xy=[-0.1324, 0.017] sep=0.0264
+seed 115: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 151mm, retries=0, frozen_place=False)
+seed 116 [baseline]: re-perceive t=0 mug_xy=[-0.1122, 0.0363] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 116 [baseline]: REPAIR knocked-off @step=3425: mug z=0.7208 xy=[-0.5197, 0.174] -> re-queue (phase pick retry 1/2)
+seed 116 [baseline]: REPAIR knocked-off @step=3450: mug z=0.6549 xy=[-0.5321, 0.1741] -> re-queue (phase pick retry 2/2)
+seed 116 [baseline]: REPAIR knocked-off @step=3475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=3975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4000: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4025: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4050: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4075: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4100: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4125: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4150: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4175: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4200: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4225: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4250: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4275: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4300: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4325: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4350: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4375: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4400: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4425: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4450: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=4975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5000: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5025: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5050: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5075: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5100: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5125: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5150: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5175: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5200: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5225: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5250: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5275: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5300: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5325: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5350: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5375: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5400: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5425: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5450: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=5975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6000: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6025: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6050: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6075: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6100: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6125: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6150: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6175: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6200: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6225: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6250: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6275: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6300: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6325: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6350: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6375: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6400: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6425: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6450: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=6975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7000: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7025: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7050: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7075: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7100: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7125: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7150: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7175: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7200: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7225: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7250: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7275: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7300: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7325: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7350: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7375: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7400: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7425: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7450: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=7975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8000: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8025: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8050: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8075: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8100: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8125: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8150: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8175: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8200: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8225: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8250: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8275: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8300: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8325: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8350: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8375: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8400: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8425: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8450: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8475: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8500: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8525: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8550: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8575: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8600: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8625: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8650: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8675: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8700: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8725: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8750: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8775: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8800: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8825: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8850: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8875: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8900: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8925: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8950: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=8975: phase pick retries exhausted (2), continuing without re-queue
+seed 116 [baseline]: REPAIR knocked-off @step=9000: phase pick retries exhausted (2), continuing without re-queue
+seed 116: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 3103mm, retries=2, frozen_place=False)
+seed 117 [baseline]: re-perceive t=0 mug_xy=[-0.1361, 0.0158] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 117: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 66mm, retries=0, frozen_place=False)
+seed 118 [baseline]: re-perceive t=0 mug_xy=[-0.1362, 0.028] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 118: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 64mm, retries=0, frozen_place=False)
+seed 119 [baseline]: re-perceive t=0 mug_xy=[-0.131, 0.0367] z=0.7919 up=1.0000 yaw=0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 119: strict=False frozen=False steps=9000 exec=50 | repair rollout baseline: no STRICT place (mug moved 21mm, retries=0, frozen_place=False)
+total_wall_s=14.6
+seed | strict | frozen | steps | exec | note
+ 100 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 129mm, retries=0, frozen_place=False)
+ 101 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+ 102 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 170mm, retries=0, frozen_place=False)
+ 103 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 259mm, retries=0, frozen_place=False)
+ 104 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 343mm, retries=0, frozen_place=False)
+ 105 | False | True | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 299mm, retries=0, frozen_place=True)
+ 106 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 27mm, retries=0, frozen_place=False)
+ 107 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 417mm, retries=0, frozen_place=False)
+ 108 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 2723mm, retries=2, frozen_place=False)
+ 109 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)
+ 110 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 371mm, retries=0, frozen_place=False)
+ 111 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 28mm, retries=0, frozen_place=False)
+ 112 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 12mm, retries=0, frozen_place=False)
+ 113 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 59mm, retries=0, frozen_place=False)
+ 114 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 73mm, retries=0, frozen_place=False)
+ 115 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 151mm, retries=0, frozen_place=False)
+ 116 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 3103mm, retries=2, frozen_place=False)
+ 117 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 66mm, retries=0, frozen_place=False)
+ 118 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 64mm, retries=0, frozen_place=False)
+ 119 | False | False | 9000 | 50 | repair rollout baseline: no STRICT place (mug moved 21mm, retries=0, frozen_place=False)
+summary baseline: 0/20 STRICT, 0 INFRA
+EXIT:0

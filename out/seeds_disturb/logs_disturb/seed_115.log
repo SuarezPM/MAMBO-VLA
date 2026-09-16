@@ -1,0 +1,4 @@
+seed 115 [disturb]: re-perceive t=0 mug_xy=[-0.1257, 0.0132] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=False strict_place=False
+seed 115 [disturb]: phase pick: VERIFIED @step=600 xy=[-0.1322, 0.0171] sep=0.0287
+seed 115 [disturb]: TEST SETUP disturb @step=3000: mug shoved +0.05 m x -> xy=[-0.0718, 0.0979] (queue cleared)
+wall_s=0.7 result={'seed': 115, 'mode': 'disturb', 'success_strict': False, 'success_frozen': False, 'steps': 9000, 'forward_p50_ms': 22.9127, 'forward_p95_ms': 23.9465, 'exec_steps': 50, 'retries': {'pick': 0, 'set-down': 0, 'handover': 0, 'place': 0}, 'skipped': [], 'disturbed': True, 'mug_moved_mm': 100.7, 'note': 'repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)'}

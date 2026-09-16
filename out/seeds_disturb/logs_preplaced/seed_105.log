@@ -1,0 +1,7 @@
+seed 105 [preplaced]: TEST SETUP preplaced: mug spawned at DEST [0.18, -0.01] (skip test)
+seed 105 [preplaced]: re-perceive t=0 mug_xy=[0.18, -0.01] z=0.7919 up=1.0000 yaw=-0.000 sep=-0.0001 frozen_place=True strict_place=True
+seed 105 [preplaced]: phase pick: SKIP (already verified at t=0)
+seed 105 [preplaced]: phase set-down: SKIP (already verified at t=0)
+seed 105 [preplaced]: phase handover: SKIP (already verified at t=0)
+seed 105 [preplaced]: phase place: SKIP (already verified at t=0)
+wall_s=0.1 result={'seed': 105, 'mode': 'preplaced', 'success_strict': True, 'success_frozen': True, 'steps': 0, 'forward_p50_ms': 0.0, 'forward_p95_ms': 0.0, 'exec_steps': 50, 'retries': {'pick': 0, 'set-down': 0, 'handover': 0, 'place': 0}, 'skipped': ['pick', 'set-down', 'handover', 'place'], 'disturbed': False, 'note': 'preplaced skip: mug already at DEST strict (0 policy steps)'}

@@ -1,0 +1,32 @@
+{
+  "cpu_model": "AMD Ryzen 5 3600 6-Core Processor",
+  "device": "CPU",
+  "precision": "FP32",
+  "p50_ms": 68.1,
+  "p95_ms": 71.53,
+  "fps_agg": 16.9,
+  "fps_per_stream": 4.22,
+  "niter": 100,
+  "warmup": 10,
+  "timestamp": "2026-09-16T18:29:21.174691+00:00",
+  "detail": {
+    "model": "out/export/act_full_v3_100k/model.xml",
+    "openvino_version": "2026.3.0-22451-8a17657b995-releases/2026/3",
+    "input_source": "calibration.npz",
+    "latency_path": {
+      "hint": "LATENCY",
+      "api": "sync",
+      "jobs": 1,
+      "avg_ms": 68.37,
+      "min_ms": 61.74,
+      "max_ms": 83.53
+    },
+    "throughput_path": {
+      "hint": "THROUGHPUT",
+      "api": "async",
+      "jobs": 4,
+      "total_ms": 5917.5
+    },
+    "note": "This host only. Xeon E-2386G numbers are frozen in out/bench_intel_incoming/ and never merged here."
+  }
+}
