@@ -33,6 +33,10 @@ XEON_LAT = ROOT / "out" / "bench_intel_incoming" / "vehicle_20260916T135349Z" / 
 XEON_TPUT = ROOT / "out" / "bench_intel_incoming" / "vehicle_20260916T135349Z" / "bench_fp32_THROUGHPUT_async.log"
 OOD_60 = ROOT / "out" / "ood" / "OOD_RESULTS_60_79.md"
 OOD_80 = ROOT / "out" / "ood" / "OOD_RESULTS_80_99.md"
+R80 = ROOT / "out" / "seeds_ood" / "logs_ood_80_99" / "results_80_99.json"
+R_DISTURB = ROOT / "out" / "seeds_disturb" / "results_disturb.json"
+R_BASELINE = ROOT / "out" / "seeds_disturb" / "results_baseline.json"
+R_PREPLACED = ROOT / "out" / "seeds_disturb" / "results_preplaced.json"
 
 BEGIN = "<!-- results:begin -->"
 END = "<!-- results:end -->"
@@ -68,6 +72,69 @@ def parse_ood_mean(path: Path) -> str:
                 return f"{cells[1]} — {cells[3]}"
             return s.replace("|", "/")
     return f"honest-negative (sin fila mean 1/20 en {path.name})"
+
+
+MM_RE = re.compile(r"(\d+)\s*mm")
+
+
+def _mm_from_note(note: str) -> int | None:
+    m = MM_RE.search(note or "")
+    return int(m.group(1)) if m else None
+
+
+def _cell(success: bool | None, mm: int | None) -> str:
+    if success is True:
+        return "S"
+    if mm is not None and mm >= 1000:
+        return "*"
+    if success is False:
+        return "F"
+    return "?"
+
+
+def _load_rows(path: Path) -> list | None:
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    return data if isinstance(data, list) else None
+
+
+def build_heatmap() -> str:
+    # Solo texto, desde results JSON existentes. S=SUCCESS por gate, F=FAIL, *=fling>=1000mm.
+    rows: list[str] = []
+    rows.append("### Heatmap de robustez — SOLO TEXTO (S/F/*)")
+    rows.append("")
+    rows.append("_Filas=baterías con SU gate etiquetado; columnas=seeds; celdas=S/F/*. Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples._")
+    rows.append("")
+    defs = [
+        ("frozen-ood-80-99 (frozen place)", R80, "success", "frozen"),
+        ("frozen-disturb-100-119 disturb (P6-strict)", R_DISTURB, "success_strict", "strict"),
+        ("frozen-disturb-100-119 baseline (P6-strict)", R_BASELINE, "success_strict", "strict"),
+        ("frozen-disturb-100-119 preplaced 20/20 SKIP (wrapper control, 0 policy steps — not policy capability) (P6-strict skip)", R_PREPLACED, "success_strict", "strict"),
+    ]
+    for label, path, key, _gate in defs:
+        data = _load_rows(path)
+        rel = str(path.relative_to(ROOT)) if path.is_absolute() else str(path)
+        if data is None:
+            rows.append(f"| {label} | honest-negative ({path.name} no leido) | `{rel}` |")
+            continue
+        data = sorted(data, key=lambda r: int(r.get("seed", 0)))
+        seeds = [str(int(r.get("seed", "?"))) for r in data]
+        cells: list[str] = []
+        for r in data:
+            succ = r.get(key)
+            if not isinstance(succ, bool):
+                succ = None
+            mm = r.get("mug_moved_mm")
+            if not isinstance(mm, (int, float)):
+                mm = _mm_from_note(str(r.get("note", "")))
+            cells.append(_cell(succ, int(mm) if isinstance(mm, (int, float)) else None))
+        rows.append(f"| {label} | {' '.join(seeds)} |")
+        rows.append(f"| celdas | {' '.join(cells)} | `{rel}` |")
+    rows.append("")
+    rows.append("_Leyenda: S=success por SU gate, F=fail, *=fling>=1000mm. Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._")
+    return "\n".join(rows) + "\n"
 
 
 def build_table() -> str:
@@ -112,6 +179,8 @@ def build_table() -> str:
         "| Seeds 0-9 (congeladas, PROHIBIDO re-evaluar en Carril A) | vehicle/random/swap | ver README Sec Result (3/10 vs 0/10 vs 0/10, transcrito) — no re-run aqui | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 |",
         "",
         "_Local = medido en este host (ver `cpu_model` en JSON). Xeon = cifras congeladas de otro host, citadas no mezcladas. OOD/seeds 0-9 no re-evaluados en este carril._",
+        "",
+        build_heatmap().rstrip(),
     ]
     return "\n".join(lines) + "\n"
 

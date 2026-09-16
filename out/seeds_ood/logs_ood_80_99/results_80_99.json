@@ -6,7 +6,9 @@
     "forward_p50_ms": 26.6124,
     "forward_p95_ms": 193.7407,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 8mm)"
+    "note": "policy rollout: no place (mug moved 8mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 81,
@@ -15,7 +17,9 @@
     "forward_p50_ms": 21.6944,
     "forward_p95_ms": 26.096,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 105mm)"
+    "note": "policy rollout: no place (mug moved 105mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 82,
@@ -24,7 +28,9 @@
     "forward_p50_ms": 25.3167,
     "forward_p95_ms": 29.7565,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 67mm)"
+    "note": "policy rollout: no place (mug moved 67mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 83,
@@ -33,7 +39,9 @@
     "forward_p50_ms": 23.6281,
     "forward_p95_ms": 50.3031,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 2493mm)"
+    "note": "policy rollout: no place (mug moved 2493mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 84,
@@ -42,7 +50,9 @@
     "forward_p50_ms": 22.6957,
     "forward_p95_ms": 25.4279,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 14mm)"
+    "note": "policy rollout: no place (mug moved 14mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 85,
@@ -51,7 +61,9 @@
     "forward_p50_ms": 21.9292,
     "forward_p95_ms": 22.5219,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 7mm)"
+    "note": "policy rollout: no place (mug moved 7mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 86,
@@ -60,7 +72,9 @@
     "forward_p50_ms": 23.8293,
     "forward_p95_ms": 29.6394,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 164mm)"
+    "note": "policy rollout: no place (mug moved 164mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 87,
@@ -69,7 +83,9 @@
     "forward_p50_ms": 25.4446,
     "forward_p95_ms": 27.389,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 66mm)"
+    "note": "policy rollout: no place (mug moved 66mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 88,
@@ -78,7 +94,9 @@
     "forward_p50_ms": 22.9798,
     "forward_p95_ms": 25.7598,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 67mm)"
+    "note": "policy rollout: no place (mug moved 67mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 89,
@@ -87,7 +105,9 @@
     "forward_p50_ms": 23.7876,
     "forward_p95_ms": 30.3196,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 80mm)"
+    "note": "policy rollout: no place (mug moved 80mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 90,
@@ -96,7 +116,9 @@
     "forward_p50_ms": 24.5554,
     "forward_p95_ms": 27.9808,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 213mm)"
+    "note": "policy rollout: no place (mug moved 213mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 91,
@@ -105,7 +127,9 @@
     "forward_p50_ms": 23.1539,
     "forward_p95_ms": 25.3872,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 69mm)"
+    "note": "policy rollout: no place (mug moved 69mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 92,
@@ -114,7 +138,9 @@
     "forward_p50_ms": 23.0167,
     "forward_p95_ms": 26.3167,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 276mm)"
+    "note": "policy rollout: no place (mug moved 276mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 93,
@@ -123,7 +149,9 @@
     "forward_p50_ms": 23.0567,
     "forward_p95_ms": 25.8971,
     "exec_steps": 50,
-    "note": "policy rollout via actuator apply"
+    "note": "policy rollout via actuator apply",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 94,
@@ -132,7 +160,9 @@
     "forward_p50_ms": 24.4652,
     "forward_p95_ms": 26.6737,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 71mm)"
+    "note": "policy rollout: no place (mug moved 71mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 95,
@@ -141,7 +171,9 @@
     "forward_p50_ms": 24.3582,
     "forward_p95_ms": 26.3008,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 121mm)"
+    "note": "policy rollout: no place (mug moved 121mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 96,
@@ -150,7 +182,9 @@
     "forward_p50_ms": 22.2929,
     "forward_p95_ms": 24.8074,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 161mm)"
+    "note": "policy rollout: no place (mug moved 161mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 97,
@@ -159,7 +193,9 @@
     "forward_p50_ms": 22.7563,
     "forward_p95_ms": 24.3531,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 260mm)"
+    "note": "policy rollout: no place (mug moved 260mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 98,
@@ -168,7 +204,9 @@
     "forward_p50_ms": 22.2544,
     "forward_p95_ms": 24.4418,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 59mm)"
+    "note": "policy rollout: no place (mug moved 59mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 99,
@@ -177,6 +215,8 @@
     "forward_p50_ms": 22.0419,
     "forward_p95_ms": 23.1033,
     "exec_steps": 50,
-    "note": "policy rollout: no place (mug moved 86mm)"
+    "note": "policy rollout: no place (mug moved 86mm)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   }
 ]

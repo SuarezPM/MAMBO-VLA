@@ -139,18 +139,18 @@ tagged bench — then SHIP/negative by closed-loop.
 
 - **End-to-end bimanual dinner-table, 30** — §Task. Dual SO-101 MuJoCo scene,
   table-supported relay, never an airborne handoff.
-- **VLA multi-modal reasoning, 20** — §Policy. One ACT-52M checkpoint gated by
+- **VLA multi-modal reasoning, 20** — §Policy + §QW swap-gate. One ACT-52M checkpoint gated by
   an explicit router; 4×256×256 RGB @ 20 fps plus measured joint state;
-  out-of-grammar input refused, never guessed.
-- **Robustness, 10 seeds, 15** — §Results + §Phase table. Frozen inputs,
-  per-seed table, random + swap controls, OOD 1/20 per line filed, all
-  failures retained.
-- **OpenVINO on Intel, 20** — §Intel bench. One FP32 CPU LATENCY artifact;
+  out-of-grammar input refused, never guessed. QW rigor sin números nuevos: swap-gate bit-idéntico futuro per `out/determinism/SWAP_GATE_STANDARD.md` + precedente swap 0/10 refusal per `out/gates/v3_200k_rollout.log`.
+- **Robustness, 10 seeds, 15** — §Results + §Phase table + §QW heatmap. Frozen inputs,
+  per-seed table, random + swap controls, OOD 1/20 per line filed per `out/ood/OOD_RESULTS_60_79.md` + `out/ood/OOD_RESULTS_80_99.md`, all
+  failures retained. QW rigor sin números nuevos: heatmap SOLO TEXTO S/F/* con SU gate (frozen place vs P6-strict, prohíbe comparar filas de distinto gate) en bloque generado abajo.
+- **OpenVINO on Intel, 20** — §Intel bench. One FP32 CPU LATENCY artifact **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` y **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`;
   latency/throughput/size/closed-loop on Xeon E-2386G; devices disclosed.
-- **Reproducibility, 10** — §Reproduce + §Layout. Pinned stack, frozen scene,
-  hashed seeds, bench and eval commands plus `scripts/analyze_phases.py`.
-- **Innovation, 5** — §Journey. Intermediate-peak selection rule and
-  vision-sensitivity diagnostics, both learned from filed internal ablations.
+- **Reproducibility, 10 (QW blindado)** — §Reproduce + §Layout + §QW selección congelada/determinismo/entropy. Pinned stack, frozen scene,
+  hashed seeds per `out/frozen-selection.json`, bench and eval commands plus `scripts/analyze_phases.py`. QW: `Overall: PASS` per `out/determinism/DETERMINISM_REPORT.md` + `results table: FRESH` per `scripts/results_table.py --check` + futuras 200-219 solo hashes per `out/seeds_entropy/seed_hashes_entropy.json` (cero evals).
+- **Innovation, 5** — §Journey. Intermediate-peak selection rule (pico **20.5**ép v3-100k 3/10 vs colapso **41**ép v3-200k 0/10 per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `out/gates/v3_200k_rollout.log`) y
+  vision-sensitivity diagnostics, both learned from filed internal ablations. QW Presentation/Business+: ADRs índice per `docs/adr/` + predicados por gate per `out/determinism/GOAL_PREDICATES.md`.
 
 ## Task
 
@@ -425,6 +425,42 @@ parity, closed-loop 0–9 under the same protocol, tagged bench — and only
 then a SHIP/negative verdict by closed-loop. Full report:
 `out/eval_int8/INT8_REPORT.md`.
 
+## QW — selección congelada (Fase A, disclosed)
+
+- Fuente: `out/frozen-selection.json` (`frozen_at_utc` 2026-09-16T19:43:24Z per `out/frozen-selection.json`).
+- Regla literal: `Regla vigente desde frozen_at_utc; la elección 100k>200k fue eval-informada (3/10 vs 0/10 en 0-9) y queda disclosed como tal, no como selección ciega` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 4.
+- Train/eval: train seeds 0-59 (0-9 original + 10-29 extra + 30-59 v3; 60 demos teacher scripted) per `scripts/convert_v3.py:9-11,174-179` + `scripts/run_seeds_v3.py:55`; evaluation con `rollouts closed-loop nunca ejecutados antes del scoring (frames demo exceptuados)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 3.
+- Baterías con SU gate: `frozen-ood-80-99 (frozen place)` + `frozen-disturb-100-119 disturb/baseline/preplaced (P6-strict)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 5 + `out/determinism/GOAL_PREDICATES.md`.
+- Números congelados ya citados (nada nuevo): **3/10** seeds 1/7650, 4/7775, 7/7750 per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4; paridad max_err **1.1920928955078125e-06** per `out/export/act_full_v3_100k/parity.json`; Xeon **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` y **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`; pico **20.5**ép (v3-100k) vs colapso **41**ép (v3-200k 0/10, 65–1620 mm) per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `out/gates/v3_200k_rollout.log`.
+
+## QW — ADRs (índice)
+
+- `docs/adr/0001-router-gating-single-instruction.md` — single-sentence router, swap 0/10 refusal.
+- `docs/adr/0002-peak-selection-eval-informada.md` — pico 20.5ép vs 41ép disclosed, 3/10 vs 0/10 en 0-9.
+- `docs/adr/0003-fp32-only-scored.md` — FP32-only, FP16 no-op, INT8 **not shipped — NNCF absent from the frozen env** per `out/eval_int8/INT8_REPORT.md`.
+- `docs/adr/0004-no-docker.md` — sin imagen, reproducibilidad vía lock+scripts+hashes.
+
+## QW — determinismo (artefactos, jamás closed-loop)
+
+- `Overall: PASS` per `out/determinism/DETERMINISM_REPORT.md`; `results table: FRESH` per `scripts/results_table.py --check`.
+- Check (a) smoke 1 seed con generador real `scripts/run_seeds_ood.py:seed_bundle_ood` vs `out/seeds_ood/seed_hashes_ood.json` (seed 60) per `scripts/determinism_check.py` + `out/determinism/determinism_check.log`.
+- Closed-loop excluido por no-determinista: seed 93 run1 7750 steps per `out/seeds_ood/logs_ood_80_99/eval_80_99.log` vs rerun 7775 per `out/seeds_ood/logs_ood_80_99/eval_80_99_rerun.log` + `out/seeds_ood/logs_ood_80_99/results_80_99.json`.
+- Predicados por gate en `out/determinism/GOAL_PREDICATES.md`: frozen place 1.5cm+upright+home vs P6-strict 3cm+yaw+upright+released solo-disturb; no redefinen pasado.
+
+## QW — heatmap robustez (solo texto, en bloque generado)
+
+- Ver heatmap SOLO TEXTO en el bloque generado abajo: filas=baterías con SU gate etiquetado, columnas=seeds, celdas=S/F/* (S=success por SU gate, F=fail, *=fling>=1000mm) desde `out/seeds_ood/logs_ood_80_99/results_80_99.json` + `out/seeds_disturb/results_disturb.json` + `out/seeds_disturb/results_baseline.json` + `out/seeds_disturb/results_preplaced.json`.
+- Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples per `out/ood/RANDOMIZATION.md` + `out/determinism/GOAL_PREDICATES.md`.
+- Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)` per `out/ood/OOD_DISTURB.md`.
+
+## QW — swap-gate estándar (futuras policies)
+
+- Protocolo bit-idéntico misma seed/instrucción cambiada en `out/determinism/SWAP_GATE_STANDARD.md`; precedente swap 0/10 refusal per `out/gates/v3_200k_rollout.log` (`=== SWAP200K ===`) + `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4; null-swap idéntico como ejemplo de rigor.
+
+## QW — entropy-semillas futuras (cero evals)
+
+- Futuras 200-219 sin evaluar; solo hashes en `out/seeds_entropy/seed_hashes_entropy.json` + `out/seeds_entropy/generation.log` (generador real `scripts/run_seeds_ood.py:seed_bundle_ood`, cero evals); uso futuro per `out/seeds_entropy/README.md`.
+
 ## Disclosures and known negatives
 
 - CPU-only host: Xeon E-2386G, `available_devices ['CPU']`
@@ -485,6 +521,7 @@ then a SHIP/negative verdict by closed-loop. Full report:
 - Local numbers are this-host only (AMD Ryzen 5 3600,
   `out/bench_local/bench_local_cpu.json`); Xeon numbers are frozen from
   another host (`out/bench_intel_incoming/`), never mixed.
+- QW rigor sin números nuevos: heatmap no compara filas de distinto gate (frozen place vs P6-strict) per bloque generado; entropy 200-219 sin evaluar per `out/seeds_entropy/generation.log`; swap-gate futuro sin evals nuevas per `out/determinism/SWAP_GATE_STANDARD.md`; determinismo solo artefactos (`Overall: PASS`), closed-loop excluido (seed 93: 7750 vs 7775) per `out/determinism/DETERMINISM_REPORT.md`.
 
 ## Rules compliance
 
@@ -529,7 +566,23 @@ solo lee, no inventa).
 | Seeds 0-9 (congeladas, PROHIBIDO re-evaluar en Carril A) | vehicle/random/swap | ver README Sec Result (3/10 vs 0/10 vs 0/10, transcrito) — no re-run aqui | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 |
 
 _Local = medido en este host (ver `cpu_model` en JSON). Xeon = cifras congeladas de otro host, citadas no mezcladas. OOD/seeds 0-9 no re-evaluados en este carril._
+
+### Heatmap de robustez — SOLO TEXTO (S/F/*)
+
+_Filas=baterías con SU gate etiquetado; columnas=seeds; celdas=S/F/*. Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples._
+
+| frozen-ood-80-99 (frozen place) | 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 |
+| celdas | F F F * F F F F F F F F F S F F F F F F | `out/seeds_ood/logs_ood_80_99/results_80_99.json` |
+| frozen-disturb-100-119 disturb (P6-strict) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
+| celdas | F F F F F F F F F F F F F F F F F F F F | `out/seeds_disturb/results_disturb.json` |
+| frozen-disturb-100-119 baseline (P6-strict) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
+| celdas | F F F F F F F F * F F F F F F F * F F F | `out/seeds_disturb/results_baseline.json` |
+| frozen-disturb-100-119 preplaced 20/20 SKIP (wrapper control, 0 policy steps — not policy capability) (P6-strict skip) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
+| celdas | S S S S S S S S S S S S S S S S S S S S | `out/seeds_disturb/results_preplaced.json` |
+
+_Leyenda: S=success por SU gate, F=fail, *=fling>=1000mm. Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._
 <!-- results:end -->
+
 
 
 

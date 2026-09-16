@@ -17,7 +17,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 86.1,
-    "note": "repair rollout disturb: no STRICT place (mug moved 86mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 86mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 101,
@@ -37,7 +39,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 99.1,
-    "note": "repair rollout disturb: no STRICT place (mug moved 99mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 99mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 102,
@@ -57,7 +61,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 43.2,
-    "note": "repair rollout disturb: no STRICT place (mug moved 43mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 43mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 103,
@@ -77,7 +83,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 156.5,
-    "note": "repair rollout disturb: no STRICT place (mug moved 156mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 156mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 104,
@@ -97,7 +105,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 66.5,
-    "note": "repair rollout disturb: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 67mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 105,
@@ -117,7 +127,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 194.4,
-    "note": "repair rollout disturb: no STRICT place (mug moved 194mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 194mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 106,
@@ -137,7 +149,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 80.7,
-    "note": "repair rollout disturb: no STRICT place (mug moved 81mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 81mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 107,
@@ -157,7 +171,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 438.0,
-    "note": "repair rollout disturb: no STRICT place (mug moved 438mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 438mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 108,
@@ -177,7 +193,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 197.6,
-    "note": "repair rollout disturb: no STRICT place (mug moved 198mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 198mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 109,
@@ -197,7 +215,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 48.4,
-    "note": "repair rollout disturb: no STRICT place (mug moved 48mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 48mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 110,
@@ -217,7 +237,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 69.6,
-    "note": "repair rollout disturb: no STRICT place (mug moved 70mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 70mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 111,
@@ -237,7 +259,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 45.6,
-    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 112,
@@ -257,7 +281,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 45.7,
-    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 46mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 113,
@@ -277,7 +303,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 182.3,
-    "note": "repair rollout disturb: no STRICT place (mug moved 182mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 182mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 114,
@@ -297,7 +325,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 216.7,
-    "note": "repair rollout disturb: no STRICT place (mug moved 217mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 217mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 115,
@@ -317,7 +347,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 100.7,
-    "note": "repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 101mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 116,
@@ -337,7 +369,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 312.4,
-    "note": "repair rollout disturb: no STRICT place (mug moved 312mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 312mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 117,
@@ -357,7 +391,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 40.0,
-    "note": "repair rollout disturb: no STRICT place (mug moved 40mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 40mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 118,
@@ -377,7 +413,9 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 55.5,
-    "note": "repair rollout disturb: no STRICT place (mug moved 55mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 55mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 119,
@@ -397,6 +435,8 @@
     "skipped": [],
     "disturbed": true,
     "mug_moved_mm": 59.5,
-    "note": "repair rollout disturb: no STRICT place (mug moved 60mm, retries=0, frozen_place=False)"
+    "note": "repair rollout disturb: no STRICT place (mug moved 60mm, retries=0, frozen_place=False)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   }
 ]

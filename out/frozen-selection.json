@@ -1,0 +1,59 @@
+{
+  "protocol": {
+    "eval_script": "scripts/eval_policy.py",
+    "exec_steps": 50,
+    "stats_root": "out/lerobot_v3",
+    "max_steps": 9000,
+    "policy_wrapping": "act chunk_size=50 n_action_steps=50 vision_backbone=resnet18; OpenVINO IR FP32 (model.xml/model.bin) with stats from out/lerobot_v3; temporal_ensemble_coeff=null"
+  },
+  "model": {
+    "checkpoint": "out/checkpoints/act_full_v3/checkpoints/100000/pretrained_model/model.safetensors",
+    "sha256_safetensors": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "ir_xml_sha": "28edc2bdf8a0216b0d739f6e812789fa4c841598f5077a4aa3927e95c9090567",
+    "ir_bin_sha": "15d5d97cb0b3a737e10366885ec7359cbbf8f663029160293f8d1c7d45ca4666",
+    "parity_max_err": 1.1920928955078125e-06
+  },
+  "evaluation": {
+    "batteries": [
+      {
+        "name": "frozen-0-9",
+        "seeds": "0-9",
+        "hash_file": "out/seeds/seed_hashes.json",
+        "results": []
+      },
+      {
+        "name": "frozen-10-29",
+        "seeds": "10-29",
+        "hash_file": "out/seeds_extra/seed_hashes.json",
+        "results": []
+      },
+      {
+        "name": "frozen-ood-60-79",
+        "seeds": "60-79",
+        "hash_file": "out/seeds_ood/seed_hashes_ood.json",
+        "results": []
+      },
+      {
+        "name": "frozen-ood-80-99",
+        "seeds": "80-99",
+        "hash_file": "out/seeds_ood/seed_hashes_ood_80_99.json",
+        "results": [
+          "out/seeds_ood/logs_ood_80_99/results_80_99.json"
+        ]
+      },
+      {
+        "name": "frozen-disturb-100-119",
+        "seeds": "100-119",
+        "hash_file": "out/seeds_disturb/seed_hashes_disturb.json",
+        "results": [
+          "out/seeds_disturb/results_disturb.json",
+          "out/seeds_disturb/results_baseline.json",
+          "out/seeds_disturb/results_preplaced.json"
+        ]
+      }
+    ]
+  },
+  "dev_vs_eval": "train: seeds 0-59 (0-9 original + 10-29 extra + 30-59 v3; 60 demos teacher scripted) usadas en train; evaluation: rollouts closed-loop nunca ejecutados antes del scoring (frames demo exceptuados)",
+  "frozen_at_utc": "2026-09-16T19:43:24Z",
+  "no_tune_rule": "Regla vigente desde frozen_at_utc; la elección 100k>200k fue eval-informada (3/10 vs 0/10 en 0-9) y queda disclosed como tal, no como selección ciega"
+}

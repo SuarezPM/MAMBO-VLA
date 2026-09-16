@@ -21,7 +21,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 101,
@@ -45,7 +47,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 102,
@@ -69,7 +73,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 103,
@@ -93,7 +99,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 104,
@@ -117,7 +125,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 105,
@@ -141,7 +151,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 106,
@@ -165,7 +177,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 107,
@@ -189,7 +203,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 108,
@@ -213,7 +229,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 109,
@@ -237,7 +255,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 110,
@@ -261,7 +281,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 111,
@@ -285,7 +307,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 112,
@@ -309,7 +333,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 113,
@@ -333,7 +359,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 114,
@@ -357,7 +385,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 115,
@@ -381,7 +411,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 116,
@@ -405,7 +437,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 117,
@@ -429,7 +463,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 118,
@@ -453,7 +489,9 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   },
   {
     "seed": 119,
@@ -477,6 +515,8 @@
       "place"
     ],
     "disturbed": false,
-    "note": "preplaced skip: mug already at DEST strict (0 policy steps)"
+    "note": "preplaced skip: mug already at DEST strict (0 policy steps)",
+    "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+    "frozen_selection": "out/frozen-selection.json"
   }
 ]

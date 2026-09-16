@@ -1,0 +1,12 @@
+# Determinism Report — artefactos (jamás outcomes closed-loop)
+
+Fecha (UTC): 2026-09-16T19:58:16Z
+Alcance: determinismo de ARTEFACTOS. Outcomes closed-loop documentados no-deterministas y excluidos: seed 93 run1 7750 steps (`out/seeds_ood/logs_ood_80_99/eval_80_99.log`) vs rerun 7775 (`out/seeds_ood/logs_ood_80_99/eval_80_99_rerun.log`, `out/seeds_ood/logs_ood_80_99/results_80_99.json`).
+
+| Check | Resultado | Detalle |
+|---|---|---|
+| (a) bundle seed 60 vs hash-file | PASS | smoke 1 seed: seed 60 generador real hash match e8d5bec61c568715... (seed_hashes_ood.json) |
+| (b) results_table --check | PASS | results_table --check FRESH (results table: FRESH) |
+| (c) re-sha IR + parity | PASS | xml 28edc2bdf8a0216b...==28edc2bdf8a0216b... ; bin 15d5d97cb0b3a737...==15d5d97cb0b3a737... ; max_err 1.1920928955078125e-06==1.1920928955078125e-06 pass=True |
+
+Overall: PASS

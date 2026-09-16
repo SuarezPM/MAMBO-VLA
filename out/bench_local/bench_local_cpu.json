@@ -28,5 +28,7 @@
       "total_ms": 5917.5
     },
     "note": "This host only. Xeon E-2386G numbers are frozen in out/bench_intel_incoming/ and never merged here."
-  }
+  },
+  "checkpoint_sha256": "3ae1514903116bcdb18bca3f10546f8b133e8636a1170f1642e50a0e09b6cc83",
+  "frozen_selection": "out/frozen-selection.json"
 }
