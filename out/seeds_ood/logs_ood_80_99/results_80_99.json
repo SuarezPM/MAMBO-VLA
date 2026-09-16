@@ -1,0 +1,182 @@
+[
+  {
+    "seed": 80,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 26.6124,
+    "forward_p95_ms": 193.7407,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 8mm)"
+  },
+  {
+    "seed": 81,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.6944,
+    "forward_p95_ms": 26.096,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 105mm)"
+  },
+  {
+    "seed": 82,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 25.3167,
+    "forward_p95_ms": 29.7565,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 67mm)"
+  },
+  {
+    "seed": 83,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.6281,
+    "forward_p95_ms": 50.3031,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 2493mm)"
+  },
+  {
+    "seed": 84,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.6957,
+    "forward_p95_ms": 25.4279,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 14mm)"
+  },
+  {
+    "seed": 85,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 21.9292,
+    "forward_p95_ms": 22.5219,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 7mm)"
+  },
+  {
+    "seed": 86,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.8293,
+    "forward_p95_ms": 29.6394,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 164mm)"
+  },
+  {
+    "seed": 87,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 25.4446,
+    "forward_p95_ms": 27.389,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 66mm)"
+  },
+  {
+    "seed": 88,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.9798,
+    "forward_p95_ms": 25.7598,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 67mm)"
+  },
+  {
+    "seed": 89,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.7876,
+    "forward_p95_ms": 30.3196,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 80mm)"
+  },
+  {
+    "seed": 90,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.5554,
+    "forward_p95_ms": 27.9808,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 213mm)"
+  },
+  {
+    "seed": 91,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.1539,
+    "forward_p95_ms": 25.3872,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 69mm)"
+  },
+  {
+    "seed": 92,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 23.0167,
+    "forward_p95_ms": 26.3167,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 276mm)"
+  },
+  {
+    "seed": 93,
+    "success": true,
+    "steps": 7775,
+    "forward_p50_ms": 23.0567,
+    "forward_p95_ms": 25.8971,
+    "exec_steps": 50,
+    "note": "policy rollout via actuator apply"
+  },
+  {
+    "seed": 94,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.4652,
+    "forward_p95_ms": 26.6737,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 71mm)"
+  },
+  {
+    "seed": 95,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 24.3582,
+    "forward_p95_ms": 26.3008,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 121mm)"
+  },
+  {
+    "seed": 96,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.2929,
+    "forward_p95_ms": 24.8074,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 161mm)"
+  },
+  {
+    "seed": 97,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.7563,
+    "forward_p95_ms": 24.3531,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 260mm)"
+  },
+  {
+    "seed": 98,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.2544,
+    "forward_p95_ms": 24.4418,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 59mm)"
+  },
+  {
+    "seed": 99,
+    "success": false,
+    "steps": 9000,
+    "forward_p50_ms": 22.0419,
+    "forward_p95_ms": 23.1033,
+    "exec_steps": 50,
+    "note": "policy rollout: no place (mug moved 86mm)"
+  }
+]

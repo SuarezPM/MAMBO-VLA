@@ -1,0 +1,6 @@
+# seed 93 OOD 80-99 v3-100k EXEC_STEPS=50 stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+# checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+# hash=290ac935660336829dc82318e53e64a064bba65c9aa0e0790d15fed415ffa176
+# wall_s=0.8
+seed 93: success=True steps=7775 fwd_p50=23.0567ms fwd_p95=25.8971ms exec=50 | policy rollout via actuator apply
+success=True steps=7775 fwd_p50=23.0567 fwd_p95=25.8971 exec=50 note=policy rollout via actuator apply

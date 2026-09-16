@@ -1,0 +1,48 @@
+stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+exec_steps=50 (frozen, logged per row)
+hash_file=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/seeds_ood/seed_hashes_ood_80_99.json
+Loading weights from local directory
+seed 80: success=False steps=9000 fwd_p50=26.6124ms fwd_p95=193.7407ms exec=50 | policy rollout: no place (mug moved 8mm)
+seed 81: success=False steps=9000 fwd_p50=21.6944ms fwd_p95=26.096ms exec=50 | policy rollout: no place (mug moved 105mm)
+seed 82: success=False steps=9000 fwd_p50=25.3167ms fwd_p95=29.7565ms exec=50 | policy rollout: no place (mug moved 67mm)
+seed 83: success=False steps=9000 fwd_p50=23.6281ms fwd_p95=50.3031ms exec=50 | policy rollout: no place (mug moved 2493mm)
+seed 84: success=False steps=9000 fwd_p50=22.6957ms fwd_p95=25.4279ms exec=50 | policy rollout: no place (mug moved 14mm)
+seed 85: success=False steps=9000 fwd_p50=21.9292ms fwd_p95=22.5219ms exec=50 | policy rollout: no place (mug moved 7mm)
+seed 86: success=False steps=9000 fwd_p50=23.8293ms fwd_p95=29.6394ms exec=50 | policy rollout: no place (mug moved 164mm)
+seed 87: success=False steps=9000 fwd_p50=25.4446ms fwd_p95=27.389ms exec=50 | policy rollout: no place (mug moved 66mm)
+seed 88: success=False steps=9000 fwd_p50=22.9798ms fwd_p95=25.7598ms exec=50 | policy rollout: no place (mug moved 67mm)
+seed 89: success=False steps=9000 fwd_p50=23.7876ms fwd_p95=30.3196ms exec=50 | policy rollout: no place (mug moved 80mm)
+seed 90: success=False steps=9000 fwd_p50=24.5554ms fwd_p95=27.9808ms exec=50 | policy rollout: no place (mug moved 213mm)
+seed 91: success=False steps=9000 fwd_p50=23.1539ms fwd_p95=25.3872ms exec=50 | policy rollout: no place (mug moved 69mm)
+seed 92: success=False steps=9000 fwd_p50=23.0167ms fwd_p95=26.3167ms exec=50 | policy rollout: no place (mug moved 276mm)
+seed 93: success=True steps=7775 fwd_p50=23.0567ms fwd_p95=25.8971ms exec=50 | policy rollout via actuator apply
+seed 94: success=False steps=9000 fwd_p50=24.4652ms fwd_p95=26.6737ms exec=50 | policy rollout: no place (mug moved 71mm)
+seed 95: success=False steps=9000 fwd_p50=24.3582ms fwd_p95=26.3008ms exec=50 | policy rollout: no place (mug moved 121mm)
+seed 96: success=False steps=9000 fwd_p50=22.2929ms fwd_p95=24.8074ms exec=50 | policy rollout: no place (mug moved 161mm)
+seed 97: success=False steps=9000 fwd_p50=22.7563ms fwd_p95=24.3531ms exec=50 | policy rollout: no place (mug moved 260mm)
+seed 98: success=False steps=9000 fwd_p50=22.2544ms fwd_p95=24.4418ms exec=50 | policy rollout: no place (mug moved 59mm)
+seed 99: success=False steps=9000 fwd_p50=22.0419ms fwd_p95=23.1033ms exec=50 | policy rollout: no place (mug moved 86mm)
+total_wall_s=16.0 total_wall_min=0.3
+seed | success | steps | forward_p50_ms | forward_p95_ms | exec_steps | note
+  80 | False | 9000 | 26.6124 | 193.7407 | 50 | policy rollout: no place (mug moved 8mm)
+  81 | False | 9000 | 21.6944 | 26.096 | 50 | policy rollout: no place (mug moved 105mm)
+  82 | False | 9000 | 25.3167 | 29.7565 | 50 | policy rollout: no place (mug moved 67mm)
+  83 | False | 9000 | 23.6281 | 50.3031 | 50 | policy rollout: no place (mug moved 2493mm)
+  84 | False | 9000 | 22.6957 | 25.4279 | 50 | policy rollout: no place (mug moved 14mm)
+  85 | False | 9000 | 21.9292 | 22.5219 | 50 | policy rollout: no place (mug moved 7mm)
+  86 | False | 9000 | 23.8293 | 29.6394 | 50 | policy rollout: no place (mug moved 164mm)
+  87 | False | 9000 | 25.4446 | 27.389 | 50 | policy rollout: no place (mug moved 66mm)
+  88 | False | 9000 | 22.9798 | 25.7598 | 50 | policy rollout: no place (mug moved 67mm)
+  89 | False | 9000 | 23.7876 | 30.3196 | 50 | policy rollout: no place (mug moved 80mm)
+  90 | False | 9000 | 24.5554 | 27.9808 | 50 | policy rollout: no place (mug moved 213mm)
+  91 | False | 9000 | 23.1539 | 25.3872 | 50 | policy rollout: no place (mug moved 69mm)
+  92 | False | 9000 | 23.0167 | 26.3167 | 50 | policy rollout: no place (mug moved 276mm)
+  93 | True | 7775 | 23.0567 | 25.8971 | 50 | policy rollout via actuator apply
+  94 | False | 9000 | 24.4652 | 26.6737 | 50 | policy rollout: no place (mug moved 71mm)
+  95 | False | 9000 | 24.3582 | 26.3008 | 50 | policy rollout: no place (mug moved 121mm)
+  96 | False | 9000 | 22.2929 | 24.8074 | 50 | policy rollout: no place (mug moved 161mm)
+  97 | False | 9000 | 22.7563 | 24.3531 | 50 | policy rollout: no place (mug moved 260mm)
+  98 | False | 9000 | 22.2544 | 24.4418 | 50 | policy rollout: no place (mug moved 59mm)
+  99 | False | 9000 | 22.0419 | 23.1033 | 50 | policy rollout: no place (mug moved 86mm)
+summary: 1/20 SUCCESS, 0 INFRA

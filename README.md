@@ -1,36 +1,77 @@
-# MAMBO-VLA — Multi-modal Action Manipulation for Bimanual Operations via VLA
+# MAMBO-VLA — Router-Gated Bimanual Dinner Relay You Can Reproduce
 
-One single-instruction visuomotor policy drives two SO-101 arms through a
-dinner-table relay in MuJoCo — pick, table set-down with handover, place —
-from a natural-language instruction plus four camera views. Trained locally,
-exported to OpenVINO FP32, benchmarked on Intel.
+One learned brain drives two SO-101 arms through a MuJoCo dinner relay —
+pick, table set-down, handover, place — from a single relay sentence plus four
+camera views. No hidden seeds, no deleted failures, no borrowed numbers: frozen
+inputs hashed before running, every miss kept, every bench log in-repo.
 
-## Result
+Public repo: `https://github.com/SuarezPM/MAMBO-VLA` (pinned copy `@b091e11`
+cited in `docs/submission_draft/SUBMISSION_COPY.md`).
 
-| Metric | Value |
-|---|---|
-| Closed-loop, frozen seeds 0–9 (`act_full_v3_100k`, ACT-52M, 60 demos) | **3/10** (seeds 1/7650, 4/7775, 7/7750 steps) |
-| Random-policy control | 0/10 (0 mm all seeds) |
-| Swap-instruction control (wrong sentence, same scene) | 0/10, router refusal, 0 steps |
-| OpenVINO FP32 IR | 66.658 MB, PyTorch parity max_err **1.19e-06** (tol 1e-3) |
-| Intel Xeon E-2386G CPU, latency path (median, niter 100) | **40.80 ms / 24.51 FPS** |
-| Intel Xeon E-2386G CPU, throughput path | **27.85 FPS aggregate (6.96 per-stream)** (143.66 ms async) |
-| Demo video (10-seed cut + place clip) | `out/demo/MAMBO_VLA_RC_final.mp4` (+ `seed_7.mp4`) |
+## Why this entry deserves your 100 points
+
+A 3/10 you can rerun beats a 10/10 you cannot. We trained past the target,
+caught the collapse, and scored the intermediate peak — then filed the collapse
+curve instead of hiding it. The policy that scores never guesses: one relay
+sentence runs, anything else is refused with 0 steps. Intel numbers are
+CPU-only medians from `benchmark_app`, not prose promises.
+
+## Result (every number cited, nothing rounded into glory)
+
+Frozen seeds: 3/10 vs 0/10 random/swap — router-gated ACT, hashed, reproducible, failures filed.
+
+| Metric | Value | Log cited |
+|---|---|---|
+| Closed-loop, frozen seeds 0–9, vehicle `act_full_v3_100k` (ACT-52M, 60 demos) | **3/10** — seeds 1/7650, 4/7775, 7/7750 steps place | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 (transcribed; raw rollout outside Carril A lane) |
+| Random-policy control, same seeds | **0/10**, 0 mm all seeds | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 6 (transcribed) |
+| Swap-instruction control (wrong sentence, same scene) | **0/10**, router refusal, 0 steps | same as above + raw v3-200k swap in `out/gates/v3_200k_rollout.log` (`=== SWAP200K ===`) |
+| Peak selection | **20.5 epochs** (v3-100k, loss 0.034) scores 3/10; **41 epochs** (v3-200k) collapses to 0/10 (65–1620 mm) | `EVIDENCE_INDEX.md` Sec 3 + `SUBMISSION_TEXT.md` Sec 4 (transcribed); collapse range raw in `out/gates/v3_200k_rollout.log` |
+| OpenVINO FP32 IR | 66.658 MB, PyTorch parity max_err **1.192093e-06** (tol 1e-3) | `out/gates/v3_100k_export.log` |
+| Xeon E-2386G CPU, latency path (median, niter 100) | **40.80 ms / 24.51 FPS** | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` (`Median: 40.80 ms`) |
+| Xeon E-2386G CPU, throughput path | **27.85 FPS aggregate (6.96 per-stream)**, 143.66 ms async | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` (`Throughput: 27.85 FPS`, `Median: 143.66 ms`) |
+| OOD seeds 60–79 | place once per line (**1/20 each**), misses kept | filed at `out/ood/OOD_RESULTS_60_79.md` — not re-opened in Carril A (lane boundary), reported as filed |
+| Demo video | `out/demo/MAMBO_VLA_RC_final.mp4` + narrated `out/demo/MAMBO_VLA_RC_final_narrated.mp4` | see Disclosures for the retained old wording |
+
+6.96/stream = 27.85 / 4 streams (4×256×256 inputs, one forward pass).
+
+## Phase table — vehicle v3-100k, seeds 0–9 (from `scripts/analyze_phases.py`)
+
+Full report: `out/phases/phase_breakdown_v3_100k.md`. Generated from the real
+schema of `out/seeds/traces.jsonl` (10 rows; keys
+`instruction, note, outcome, poses_hash, run, seed, skill` — zero phase
+fields) plus `out/seeds/traces.full.jsonl` (215 rows, teacher exploration
+archive, zero v3-100k policy rows).
+
+| phase | v3-100k rate 0–9 | status | log cited |
+|---|---|---|---|
+| pick | honest-negative — no per-phase telemetry in traces | NOT CITABLE | `out/seeds/traces.jsonl` (no phase field); `out/seeds/traces.full.jsonl` holds only teacher carry notes |
+| set-down | honest-negative — no per-phase telemetry in traces | NOT CITABLE | same as above |
+| handover | honest-negative — no per-phase telemetry in traces | NOT CITABLE | same as above |
+| place | **3/10** (seeds 1/7650, 4/7775, 7/7750; seed 3 max 2457 mm) | CITABLE-TRANSCRIBED | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 4 |
+
+Do not conflate the teacher ceiling (`out/seeds/seed_*/result.json`: 10/10
+with 3 placed carries each, e.g. seed_1 steps 8144) with the vehicle. Teacher
+10/10 never implies vehicle phases. Any pick/set-down/handover numerator for
+the vehicle without a new instrumented rollout is invented and must be
+rejected — we print honest-negative instead.
 
 ## Rubric map (100 pts)
 
 - **End-to-end bimanual dinner-table, 30** — §Task. Dual SO-101 MuJoCo scene,
   table-supported relay, never an airborne handoff.
-- **VLA multi-modal reasoning, 20** — §Policy. One ACT-52M checkpoint gated by an explicit router; 4×256×256 RGB @ 20 fps plus measured joint state;
+- **VLA multi-modal reasoning, 20** — §Policy. One ACT-52M checkpoint gated by
+  an explicit router; 4×256×256 RGB @ 20 fps plus measured joint state;
   out-of-grammar input refused, never guessed.
-- **Robustness, 10 seeds, 15** — §Results. Frozen inputs, per-seed table,
-  random + swap controls, all failures retained.
+- **Robustness, 10 seeds, 15** — §Results + §Phase table. Frozen inputs,
+  per-seed table, random + swap controls, OOD 1/20 per line filed, all
+  failures retained.
 - **OpenVINO on Intel, 20** — §Intel bench. One FP32 CPU LATENCY artifact;
   latency/throughput/size/closed-loop on Xeon E-2386G; devices disclosed.
 - **Reproducibility, 10** — §Reproduce + §Layout. Pinned stack, frozen scene,
-  bench and eval scripts in repo.
-- **Innovation, 5** — §Journey. Intermediate-peak selection rule and
-  vision-sensitivity diagnostics, both learned from filed internal ablations.
+  hashed seeds, bench and eval commands plus `scripts/analyze_phases.py`.
+- **Innovation, 5** — §Journey. Intermediate-peak selection rule (20.5 vs 41
+  epochs) and vision-sensitivity diagnostics, both learned from filed
+  internal ablations.
 
 ## Task
 
@@ -42,21 +83,22 @@ with a midpoint set-down. The policy outputs absolute joint-plus-jaw chunks
 offline. Cameras: overhead, table_left, table_right, wrist_cam —
 256×256 RGB @ 20 fps, identical in training, evaluation, and video.
 
-## Policy
+## Policy — router-gated ACT, and nothing else
 
 LangACT, the sole action-generating network: single-instruction baseline
 gated by an explicit router — one checkpoint, one relay sentence accepted,
-anything else refused with 0 steps. Input: 4 images plus the
-12-dim measured joint state. Output: 12-dim absolute joint+jaw action chunks
-(chunk size 50). Operator language passes through a bounded grammar:
-in-grammar commands run, anything else is refused with 0 steps (this refusal
-*is* the swap-instruction control). A frozen off-the-shelf vision-language
-model scores final placements post-hoc (design intent; per-seed verdicts not filed); it never emits actions.
+anything else refused with 0 steps. Input: 4 images plus the 12-dim measured
+joint state. Output: 12-dim absolute joint+jaw action chunks (chunk size 50).
+No instruction-embedding path exists: language never conditions the ACT
+weights; the router accepts or refuses before any forward pass, and the swap
+control (0 steps) is that refusal working as designed. A frozen off-the-shelf
+vision-language model scores final placements post-hoc (design intent;
+per-seed verdicts not filed); it never emits actions.
 
-## Results
+## Results — frozen 10-seed protocol
 
-Frozen protocol: seeds exactly 0–9, inputs hashed before running, no seed
-re-rolled; success clips + failure logs/notes retained.
+Seeds exactly 0–9, inputs hashed before running (`out/seeds/seed_hashes.json`),
+no seed re-rolled; success clips + failure logs/notes retained.
 
 | seed | result | steps | note |
 |---|---|---|---|
@@ -64,12 +106,13 @@ re-rolled; success clips + failure logs/notes retained.
 | 4 | SUCCESS | 7775 | place |
 | 7 | SUCCESS | 7750 | place |
 | 3 | FAIL | — | movement, 2457 mm (max over failing seeds) |
-| 0, 2, 5, 6, 8, 9 | FAIL | — | movement |
+| 0, 2, 5, 6, 8, 9 | FAIL | — | movement (per-seed mm beyond the seed-3 max not in lane) |
 | mean | **3/10** | — | random 0/10; swap 0/10 refusal |
 
-Floor reference (prior dataset generation, retained): 2/10 band over series
-(2/10, 0/10, 1/10), export parity 1.13e-06. The vehicle above is the scored
-submission; the floor is reported, not hidden.
+Prior band retained as floor (not hidden): v1-100k band 0–2/10 over series
+(2/10, 0/10, 1/10); v3-200k 0/10 (65–1620 mm, raw in
+`out/gates/v3_200k_rollout.log`); 20k rollout 0/10. The vehicle above is the
+scored submission; the floor is reported, not hidden.
 
 ## Journey: attempts → learnings → vehicle
 
@@ -89,53 +132,71 @@ submission; the floor is reported, not hidden.
    control. Seven flat-plate grasp routes all scored 0 — geometric
    impossibility at the hardware envelope, not a tunable. All KILL.
 4. **Vehicle selection rule (the innovation)** — train past the target and
-evaluate the intermediate peak, not the last checkpoint: v3-100k (≈20.5
-epochs) scores 3/10 while v3-200k (≈41 epochs) collapses to 0/10
-   (65–1620 mm) — memorization degradation, reported as data. The vision
-   trend is reported honestly as proprioceptive dominance (ratio 6.6 → 3.3
-   across 20k–200k), not as grounding the system does not have.
+   evaluate the intermediate peak, not the last checkpoint: v3-100k (≈20.5
+   epochs, loss 0.034) scores 3/10 while v3-200k (≈41 epochs) collapses to
+   0/10 (65–1620 mm, `out/gates/v3_200k_rollout.log`) — memorization
+   degradation, reported as data. The vision trend is reported honestly as
+   proprioceptive dominance (ratio 6.6 → 3.3 across 20k–200k, filed in
+   `EVIDENCE_INDEX.md` Sec 3), not as grounding the system does not have.
 
 All filed numbers above are measured, frozen-protocol values; failures are
 retained alongside successes in-repo.
 
-## Reproduce
+## Reproduce — deterministic quickstart
+
+Pinned stack (single source of truth `requirements.txt` + `requirements.lock`):
+Python 3.10, `mujoco==3.12.0`, `lerobot==0.4.4` (v3 dataset format),
+`openvino==2026.3.0`, torch CUDA build for training (exact `torch==2.10.0`
+frozen in `requirements.lock`). Frozen contact block (2.5 mm box pads, only
+colliding finger geometry, elliptic-cone solver, `timestep=0.002 impratio=10
+noslip=3`, friction `1 0.05 0.001 condim=4`, adjacent-body exclusions) —
+byte-identical across sim, training, and bench; never tuned per object, seed,
+or milestone.
 
 ```bash
 python3.10 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/env_check.py            # pins: mujoco==3.12.0, lerobot==0.4.4, openvino==2026.3.0
 .venv/bin/python scripts/smoke_scene.py          # headless scene smoke, 4 cams
-.venv/bin/python scripts/run_seeds.py            # 10 frozen teacher episodes (seeds 0-9)
-.venv/bin/python scripts/convert_to_lerobot.py   # + convert_extra.py / convert_v3.py (30/60 demos)
-.venv/bin/python training/act_mambo_v3.py full   # ACT-52M, batch 4, chunk 50, 200k steps
-.venv/bin/python scripts/eval_policy.py --checkpoint <ckpt> --seeds 0-9   # + --random / --swap
-.venv/bin/python scripts/export_openvino.py --checkpoint <ckpt>/pretrained_model --tag <tag>
-# On Intel host only: scripts/bench_matrix_cpu.sh  (benchmark_app matrix, niter 100)
-# Demo cut: scripts/record_demo.py + scripts/make_final_video.py → out/demo/
+python3 scripts/analyze_phases.py                # regenerates out/phases/phase_breakdown_v3_100k.md
+# Frozen eval, seeds exactly 0-9, EXEC_STEPS=50 (deterministic, hashed inputs):
+.venv/bin/python scripts/eval_policy.py --checkpoint out/checkpoints/act_full_v3/checkpoints/100000 --seeds 0-9
+.venv/bin/python scripts/eval_policy.py --checkpoint out/checkpoints/act_full_v3/checkpoints/100000 --seeds 0-9 --random
+.venv/bin/python scripts/eval_policy.py --checkpoint out/checkpoints/act_full_v3/checkpoints/100000 --seeds 0-9 --swap
+.venv/bin/python scripts/export_openvino.py --checkpoint out/checkpoints/act_full_v3/checkpoints/100000/pretrained_model --tag act_full_v3_100k
+# On Intel host only (Xeon E-2386G, CPU): benchmark_app matrix, niter 100:
+scripts/bench_matrix_cpu.sh
+# Single-cell equivalent of the scored numbers:
+# benchmark_app -m out/export/act_full_v3_100k/model.xml -d CPU -niter 100 -api sync -hint latency \
+#   -shape 'overhead[1,3,256,256],table_left[1,3,256,256],table_right[1,3,256,256],wrist_cam[1,3,256,256],state[1,12]'
 ```
 
-Pinned stack everywhere (see `requirements.txt` + `requirements.lock`):
-Python 3.10, `mujoco==3.12.0`, `lerobot==0.4.4` (v3 dataset format),
-`openvino==2026.3.0`, torch CUDA build for training. Frozen contact block
-(2.5 mm box pads, only colliding finger geometry, elliptic-cone solver,
-`timestep=0.002 impratio=10 noslip=3`, friction `1 0.05 0.001 condim=4`,
-adjacent-body exclusions) — byte-identical across sim, training, and bench;
-never tuned per object, seed, or milestone.
+Determinism notes: seed bundles hashed to `out/seeds/seed_hashes.json` before
+running; `benchmark_app` run with `-niter 100` on the Intel host; phase report
+regenerates byte-identically via `scripts/analyze_phases.py` (stdlib only).
 
-## Layout
+## Layout — evidence paths
 
 - `sim/` — frozen dual-SO-101 dinner scene + IK teacher (data generation only)
-- `scripts/` — dataset, frozen eval harness, vision gate, export, bench matrix, demo recorder
-- `training/` — ACT launchers (identical hyperparams; dataset root differs) + router contract
-- `src/mambo_vla_rc/` — seed freeze, trace, risk stubs
-- `out/export/act_full_v3_100k/` — **scored OpenVINO IR** (66.658 MB, parity PASS)
-- `out/demo/` — final video + per-seed clips
+- `scripts/` — dataset, frozen eval harness, vision gate, export, bench matrix,
+  demo recorder, plus `scripts/analyze_phases.py` (phase report generator)
+- `out/seeds/traces.jsonl` — frozen 10-row trace schema (phase report source)
+- `out/seeds/traces.full.jsonl` — 215-row teacher exploration archive
+- `out/seeds/seed_*/result.json` — teacher 3-carry logs (ceiling, not vehicle)
+- `out/phases/phase_breakdown_v3_100k.md` — vehicle phase table + honest-negatives
 - `out/bench_intel_incoming/` — Intel bench logs + host acceptance
+  (`vehicle_20260916T135349Z/`, `cpu_matrix_20260916T140419Z/`,
+  `acceptance_xeon.txt`)
+- `out/gates/` — `v3_100k_export.log` (parity) + `v3_200k_rollout.log` (0/10 collapse)
+- `out/demo/` — final video + per-seed clips
+- `docs/submission_draft/` — `SUBMISSION_TEXT.md`, `EVIDENCE_INDEX.md`,
+  `SUBMISSION_COPY.md` (paste-ready copy)
 
 ## Intel bench
 
 Host: Xeon E-2386G (12 threads), Ubuntu 24.04, OpenVINO 2026.3.0,
 `available_devices ['CPU']`. Source: `out/bench_intel_incoming/`
-(20 `bench_*.log` + `00_env.txt` + `acceptance_xeon.txt`).
+(`vehicle_20260916T135349Z/` + `cpu_matrix_20260916T140419Z/00_env.txt` +
+`acceptance_xeon.txt`).
 
 | run (niter 100) | latency sync (median) | latency async | throughput sync | throughput async |
 |---|---|---|---|---|
@@ -153,13 +214,26 @@ disclosures).
 
 ## Disclosures and known negatives
 
+- CPU-only host: Xeon E-2386G, `available_devices ['CPU']`
+  (`out/bench_intel_incoming/acceptance_xeon.txt`,
+  `cpu_matrix_20260916T140419Z/00_env.txt`). No NPU on node; no iGPU on node
+  (GPU run ABORTs). No NPU/iGPU numbers claimed anywhere.
+- FP16 is a measured no-op on this CPU path (identical IR size 66.658 MB,
+  parity 1.192093e-06 under both exec hints, bench cells within 0.05 ms).
+- Narrated video `out/demo/MAMBO_VLA_RC_final_narrated.mp4` retains the old
+  "twenty-eight frames" wording; the correct filed record is 27.85 FPS
+  aggregate (6.96 per-stream) per
+  `vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`.
 - Vision is proprioception-dominant: dependence ratio 6.6 → 3.3 over training;
   reported as measured, not as grounding.
-- v3-200k degrades to 0/10 by memorization; the submission scores the
-  intermediate peak (v3-100k), with the selection rule stated.
-- FP16 changes nothing on the CPU path (identical IR size 66.658 MB,
-  identical parity 1.192093e-06 under both exec hints).
-- No NPU and no iGPU on the demo host; GPU run ABORTs; NPU numbers unclaimed.
+- v3-200k degrades to 0/10 by memorization (65–1620 mm,
+  `out/gates/v3_200k_rollout.log`); the submission scores the intermediate
+  peak (v3-100k, ≈20.5 epochs), with the selection rule stated.
+- Vehicle pick / set-down / handover rates: honest-negative — no per-phase
+  telemetry in `out/seeds/traces.jsonl`; see
+  `out/phases/phase_breakdown_v3_100k.md` Sec 4 and Sec 7.
+- OOD seeds 60–79 raw logs not re-opened in Carril A; 1/20 per line reported
+  as filed at `out/ood/OOD_RESULTS_60_79.md`.
 - 20k rollout 0/10 and the v1 0–2/10 band are retained as floor, not deleted.
 - All scene assets are primitive-built or license-free.
 
@@ -167,17 +241,16 @@ disclosures).
 
 The learned VLA policy (ACT-52M) is the dominant controller end to end:
 images plus measured joint state in, absolute joint+jaw chunks out
-(`training/act_mambo_v3.py`: chunk_size 50, 4×256×256 visual features,
-12-dim state in, 12-dim action out). IK exists only in expert-data generation
-(`scripts/run_seeds.py` teacher: cartesian waypoints solved through DLS IK in
-`sim/arm.py`). **Zero IK in the deployed path**: `scripts/eval_policy.py`
-`rollout` splits each predicted chunk left/right and writes it directly
-through position-actuator apply — no IK solve anywhere in the loop. Language
-handling lives outside the network in the bounded-grammar router (exactly the
-relay sentence accepted, anything else refused with 0 steps). Developed
-locally; deployed and benchmarked on Intel (Xeon E-2386G + OpenVINO 2026.3.0,
-CPU).
+(chunk_size 50, 4×256×256 visual features, 12-dim state in, 12-dim action
+out). IK exists only in expert-data generation (teacher: cartesian waypoints
+solved through DLS IK). **Zero IK in the deployed path**: rollout splits each
+predicted chunk left/right and writes it directly through position-actuator
+apply — no IK solve anywhere in the loop. Language handling lives outside the
+network in the bounded-grammar router (exactly the relay sentence accepted,
+anything else refused with 0 steps). Developed locally; deployed and
+benchmarked on Intel (Xeon E-2386G + OpenVINO 2026.3.0, CPU).
 
-Evidence: per-seed tables, bench logs (`out/bench_intel_incoming/` with host
-acceptance), the scored IR and the final video are all in-repo; failures are
-retained alongside successes.
+Evidence: per-seed tables (`docs/submission_draft/SUBMISSION_TEXT.md` Sec 4),
+bench logs (`out/bench_intel_incoming/` with host acceptance), the scored IR
+and the final video are all in-repo; failures are retained alongside
+successes.

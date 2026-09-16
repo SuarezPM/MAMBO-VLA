@@ -1,0 +1,6 @@
+# seed 96 OOD 80-99 v3-100k EXEC_STEPS=50 stats_root=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/lerobot_v3
+# checkpoint=/home/thelinconx/Proyectos/MAMBO-VLA-RC/out/checkpoints/act_full_v3/checkpoints/100000
+# hash=c66ae30332730c9c9a4cb7230d36b697b20a3a086a403873a2ad908dbcbce38e
+# wall_s=0.7
+seed 96: success=False steps=9000 fwd_p50=22.2929ms fwd_p95=24.8074ms exec=50 | policy rollout: no place (mug moved 161mm)
+success=False steps=9000 fwd_p50=22.2929 fwd_p95=24.8074 exec=50 note=policy rollout: no place (mug moved 161mm)
