@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<!-- Dual articulated SO-101 dinner scene: table + shelf, no drawer (no slider
+  joint anywhere). Five joints plus a hinge gripper jaw per arm. Joint
+  dynamics: damping 0.60, frictionloss 0.052, armature 0.028; position
+  actuators kp 998.22, kv 2.731, forcerange +-3.35. Cartesian site targets
+  are solved to joint targets with a damped least-squares position servo;
+  carries are friction-only through the fingertip pads, attached only when
+  both pads touch with squeeze force and opposition. The mug and plate are
+  free bodies after spawn placement. Static yellow base visuals are MuJoCo
+  primitives (visual-only, no contact); arm links are collision-proxy
+  boxes. Table top
+  surface at TABLE_Z = 0.76. -->
+<mujoco model="mambo_dual_so101_dinner">
+  <compiler angle="radian" autolimits="true"/>
+  <!-- FROZEN contact block: solver line byte-identical to ARCH Section 3.
+    Per-arm pads carry a side prefix (left_/right_) because MuJoCo
+    requires unique geom names; size/pos/friction/condim are otherwise
+    identical to the ARCH block (2.5 mm box pads). The moving pad rides the
+    hinge jaw; at jaw angle 0 its composed pose equals the ARCH fingertip. -->
+  <option timestep="0.002" impratio="10" noslip_iterations="3" cone="elliptic"/>
+  <size njmax="4000" nconmax="1000"/>
+  <default>
+    <default class="sts3215">
+      <joint damping="0.60" frictionloss="0.052" armature="0.028"/>
+      <position kp="998.22" kv="2.731" forcerange="-3.35 3.35"/>
+    </default>
+  </default>
+  <visual>
+    <headlight ambient="0.35 0.35 0.35" diffuse="0.50 0.50 0.50" specular="0.20 0.20 0.20"/>
+    <rgba haze="0.16 0.20 0.26 1"/>
+    <global offwidth="1280" offheight="720"/>
+  </visual>
+  <asset>
+    <texture name="sky" type="skybox" builtin="gradient" rgb1="0.15 0.21 0.29" rgb2="0.04 0.07 0.12" width="512" height="3072"/>
+    <texture name="floor_tex" type="2d" builtin="checker" width="512" height="512" rgb1="0.18 0.22 0.28" rgb2="0.20 0.24 0.30"/>
+    <material name="floor_mat" texture="floor_tex" texrepeat="8 8" reflectance="0.05"/>
+    <material name="table_mat" rgba="0.72 0.79 0.81 1" specular="0.25" shininess="0.3"/>
+    <material name="edge_mat" rgba="0.07 0.12 0.17 1" specular="0.45"/>
+    <material name="arm_yellow" rgba="1 0.82 0.12 1" specular="0.3" shininess="0.5"/>
+    <material name="shelf_wood" rgba="0.37 0.21 0.12 1" specular="0.2"/>
+    <material name="mug_teal" rgba="0.33 0.73 0.69 1" specular="0.4"/>
+    <material name="plate_blue" rgba="0.33 0.51 0.76 1" specular="0.35"/>
+  </asset>
+  <worldbody>
+    <light name="key" pos="-0.7 -0.3 2.5" dir="0.2 0.2 -1" diffuse="0.75 0.77 0.8" castshadow="true"/>
+    <light name="fill" pos="0.8 0.6 1.8" dir="-0.4 -0.3 -1" diffuse="0.5 0.55 0.6" castshadow="false"/>
+    <geom name="floor" type="plane" size="3 3 0.1" material="floor_mat"/>
+    <!-- Dinner table: top surface exactly at TABLE_Z = 0.76. Friction 0.35:
+      enough damping to check sideways veer, low enough to slide under
+      gentle pushes. Scene material constant, same all seeds, outside
+      the frozen contact block. -->
+    <geom name="table" type="box" size="0.48 0.39 0.022" pos="0 0.07 0.738" material="table_mat" friction="0.35 0.01 0.001"/>
+    <geom name="table_edge" type="box" size="0.483 0.393 0.009" pos="0 0.07 0.712" material="edge_mat"/>
+    <!-- Shelf unit behind the table (staging only). NO drawer: no slider joint anywhere. -->
+    <geom name="shelf_board_low" type="box" size="0.30 0.10 0.008" pos="0 0.40 0.84" material="shelf_wood"/>
+    <geom name="shelf_board_high" type="box" size="0.30 0.10 0.008" pos="0 0.40 0.96" material="shelf_wood"/>
+    <geom name="shelf_side_left" type="box" size="0.008 0.10 0.10" pos="-0.15 0.40 0.90" material="shelf_wood"/>
+    <geom name="shelf_side_right" type="box" size="0.008 0.10 0.10" pos="0.15 0.40 0.90" material="shelf_wood"/>
+    <!-- LEFT SO-101 (faces the table). Bases sit close enough that the
+      staging-to-relay slide stays in the bent, healthy workspace throughout.
+      Pitch joints about X reach forward (+Y). -->
+    <body name="left_base" pos="-0.18 -0.20 0.778">
+      <geom name="left_base_collision" type="box" size="0.058 0.055 0.02" material="edge_mat"/>
+      <!-- Primitive base housing (visual-only): block + pedestal drum. -->
+      <geom name="left_base_housing" type="box" size="0.055 0.05 0.022" pos="0 0 0.022" material="arm_yellow" contype="0" conaffinity="0"/>
+      <geom name="left_base_drum" type="cylinder" size="0.034 0.020" pos="0 0 0.060" material="arm_yellow" contype="0" conaffinity="0"/>
+      <body name="left_pan" pos="0 0 0.02">
+        <inertial pos="0 0 0.01" mass="0.100" diaginertia="8e-05 8e-05 2e-05"/>
+        <joint name="left_shoulder_pan" type="hinge" axis="0 0 1" range="-1.91986 1.91986" class="sts3215"/>
+        <body name="left_upper" pos="0 0 0.06">
+          <inertial pos="0 0 0.10" mass="0.103" diaginertia="4e-05 1.5e-04 1.4e-04"/>
+          <joint name="left_shoulder_lift" type="hinge" axis="1 0 0" range="-1.74533 1.74533" class="sts3215"/>
+          <geom name="left_upper_col" type="box" size="0.03 0.03 0.10" pos="0 0 0.10" material="arm_yellow"/>
+          <body name="left_fore" pos="0 0 0.20">
+            <inertial pos="0 0 0.09" mass="0.104" diaginertia="3e-05 1.6e-04 1.5e-04"/>
+            <joint name="left_elbow_flex" type="hinge" axis="1 0 0" range="-1.69 1.69" class="sts3215"/>
+            <geom name="left_fore_col" type="box" size="0.025 0.025 0.095" pos="0 0 0.095" material="arm_yellow"/>
+            <body name="left_wrist" pos="0 0 0.19">
+              <inertial pos="0 0 0.03" mass="0.079" diaginertia="3.7e-05 2.5e-05 2.1e-05"/>
+              <joint name="left_wrist_flex" type="hinge" axis="1 0 0" range="-1.65806 1.65806" class="sts3215"/>
+              <geom name="left_wrist_col" type="box" size="0.02 0.02 0.03" pos="0 0 0.03" material="arm_yellow"/>
+              <!-- Tool mount pitched 90 deg about X (pads-forward side grasp).
+                Static pad at the ARCH local offset; pinch axis stays world X. -->
+              <body name="left_tool" pos="0 0 0.07" quat="0.707107 0.707107 0 0">
+                <inertial pos="0 0 -0.02" mass="0.087" diaginertia="2.8e-05 4.3e-05 3.5e-05"/>
+                <joint name="left_wrist_roll" type="hinge" axis="0 0 1" range="-2.74385 2.84121" class="sts3215"/>
+                <geom name="left_tool_col" type="box" size="0.015 0.015 0.02" pos="0 0 0" material="arm_yellow"/>
+                <site name="left_grip" pos="0 0 -0.096"/>
+                <!-- per-arm fingertip pads: 2.5 mm boxes, frozen size/pos/friction -->
+                <geom name="left_static_finger_pad" type="box" size="0.00125 0.00125 0.00125"
+                  pos="-0.008875 0.0 -0.100" friction="1 0.05 0.001" condim="4"/>
+                <body name="left_jaw" pos="0.0202 0.0188 -0.0234" quat="0.707107 0.707107 0 0">
+                  <inertial pos="0 -0.03 0.02" mass="0.012" diaginertia="6.6e-06 1.9e-06 5.3e-06"/>
+                  <joint name="left_gripper" type="hinge" axis="0 0 1" range="-0.17453 1.74533" class="sts3215"/>
+                  <geom name="left_moving_finger_pad" type="box" size="0.00125 0.00125 0.00125"
+                    pos="-0.01136 -0.076 0.019" friction="1 0.05 0.001" condim="4"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <!-- RIGHT SO-101: mirror mount, identical chain. -->
+    <body name="right_base" pos="0.18 -0.20 0.778">
+      <geom name="right_base_collision" type="box" size="0.058 0.055 0.02" material="edge_mat"/>
+      <!-- Primitive base housing (visual-only): block + pedestal drum. -->
+      <geom name="right_base_housing" type="box" size="0.055 0.05 0.022" pos="0 0 0.022" material="arm_yellow" contype="0" conaffinity="0"/>
+      <geom name="right_base_drum" type="cylinder" size="0.034 0.020" pos="0 0 0.060" material="arm_yellow" contype="0" conaffinity="0"/>
+      <body name="right_pan" pos="0 0 0.02">
+        <inertial pos="0 0 0.01" mass="0.100" diaginertia="8e-05 8e-05 2e-05"/>
+        <joint name="right_shoulder_pan" type="hinge" axis="0 0 1" range="-1.91986 1.91986" class="sts3215"/>
+        <body name="right_upper" pos="0 0 0.06">
+          <inertial pos="0 0 0.10" mass="0.103" diaginertia="4e-05 1.5e-04 1.4e-04"/>
+          <joint name="right_shoulder_lift" type="hinge" axis="1 0 0" range="-1.74533 1.74533" class="sts3215"/>
+          <geom name="right_upper_col" type="box" size="0.03 0.03 0.10" pos="0 0 0.10" material="arm_yellow"/>
+          <body name="right_fore" pos="0 0 0.20">
+            <inertial pos="0 0 0.09" mass="0.104" diaginertia="3e-05 1.6e-04 1.5e-04"/>
+            <joint name="right_elbow_flex" type="hinge" axis="1 0 0" range="-1.69 1.69" class="sts3215"/>
+            <geom name="right_fore_col" type="box" size="0.025 0.025 0.095" pos="0 0 0.095" material="arm_yellow"/>
+            <body name="right_wrist" pos="0 0 0.19">
+              <inertial pos="0 0 0.03" mass="0.079" diaginertia="3.7e-05 2.5e-05 2.1e-05"/>
+              <joint name="right_wrist_flex" type="hinge" axis="1 0 0" range="-1.65806 1.65806" class="sts3215"/>
+              <geom name="right_wrist_col" type="box" size="0.02 0.02 0.03" pos="0 0 0.03" material="arm_yellow"/>
+              <body name="right_tool" pos="0 0 0.07" quat="0.707107 0.707107 0 0">
+                <inertial pos="0 0 -0.02" mass="0.087" diaginertia="2.8e-05 4.3e-05 3.5e-05"/>
+                <joint name="right_wrist_roll" type="hinge" axis="0 0 1" range="-2.74385 2.84121" class="sts3215"/>
+                <geom name="right_tool_col" type="box" size="0.015 0.015 0.02" pos="0 0 0" material="arm_yellow"/>
+                <site name="right_grip" pos="0 0 -0.096"/>
+                <camera name="wrist_cam" pos="0.02 0 0.02" zaxis="0 0 -1"/>
+                <!-- per-arm fingertip pads: 2.5 mm boxes, frozen size/pos/friction -->
+                <geom name="right_static_finger_pad" type="box" size="0.00125 0.00125 0.00125"
+                  pos="-0.008875 0.0 -0.100" friction="1 0.05 0.001" condim="4"/>
+                <body name="right_jaw" pos="0.0202 0.0188 -0.0234" quat="0.707107 0.707107 0 0">
+                  <inertial pos="0 -0.03 0.02" mass="0.012" diaginertia="6.6e-06 1.9e-06 5.3e-06"/>
+                  <joint name="right_gripper" type="hinge" axis="0 0 1" range="-0.17453 1.74533" class="sts3215"/>
+                  <geom name="right_moving_finger_pad" type="box" size="0.00125 0.00125 0.00125"
+                    pos="-0.01136 -0.076 0.019" friction="1 0.05 0.001" condim="4"/>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <!-- Mug (left staging) and plate (right staging): free bodies after spawn. -->
+    <body name="mug" pos="-0.12 0.02 0.794">
+      <freejoint name="mug_free"/>
+      <geom name="mug_geom" type="cylinder" size="0.025 0.032" mass="0.045" material="mug_teal" friction="0.8 0.005 0.0001" condim="4" solref="0.012 1"/>
+    </body>
+    <body name="plate" pos="0.18 0.10 0.774">
+      <freejoint name="plate_free"/>
+      <geom name="plate_geom" type="cylinder" size="0.066 0.012" mass="0.065" material="plate_blue" friction="0.8 0.005 0.0001" condim="4" solref="0.012 1"/>
+    </body>
+    <!-- Table-supported relay point [0, -0.10, table_z]: visual marker only. -->
+    <body name="relay_marker" pos="0 -0.10 0.7606">
+      <geom name="relay_ring" type="cylinder" size="0.012 0.0003" rgba="0.5 0.51 0.43 0.9" contype="0" conaffinity="0" mass="0"/>
+    </body>
+    <body name="dest_marker" pos="0.18 -0.01 0.7606">
+      <geom name="dest_ring" type="cylinder" size="0.012 0.0003" rgba="0.5 0.51 0.43 0.9" contype="0" conaffinity="0" mass="0"/>
+    </body>
+    <!-- Fixed rig: 4 cameras (256x256 set at render time, 20 fps set by sampling). -->
+    <camera name="overhead" pos="0 0.07 1.6" zaxis="0 0 1"/>
+    <camera name="table_left" pos="-0.7 -0.5 1.2" zaxis="-0.69706 -0.5676 0.43811"/>
+    <camera name="table_right" pos="0.7 -0.5 1.2" zaxis="0.69706 -0.5676 0.43811"/>
+  </worldbody>
+  <actuator>
+    <position name="left_pan" joint="left_shoulder_pan" class="sts3215"/>
+    <position name="left_lift" joint="left_shoulder_lift" class="sts3215"/>
+    <position name="left_elbow" joint="left_elbow_flex" class="sts3215"/>
+    <position name="left_wrist" joint="left_wrist_flex" class="sts3215"/>
+    <position name="left_roll" joint="left_wrist_roll" class="sts3215"/>
+    <position name="left_jaw_act" joint="left_gripper" class="sts3215"/>
+    <position name="right_pan" joint="right_shoulder_pan" class="sts3215"/>
+    <position name="right_lift" joint="right_shoulder_lift" class="sts3215"/>
+    <position name="right_elbow" joint="right_elbow_flex" class="sts3215"/>
+    <position name="right_wrist" joint="right_wrist_flex" class="sts3215"/>
+    <position name="right_roll" joint="right_wrist_roll" class="sts3215"/>
+    <position name="right_jaw_act" joint="right_gripper" class="sts3215"/>
+  </actuator>
+  <contact>
+    <!-- Adjacent-body self-collision exclusions
+      (base/pan, pan/upper, upper/fore, fore/wrist, wrist/tool, tool/jaw). -->
+    <exclude body1="left_base" body2="left_pan"/>
+    <exclude body1="left_pan" body2="left_upper"/>
+    <exclude body1="left_upper" body2="left_fore"/>
+    <exclude body1="left_fore" body2="left_wrist"/>
+    <exclude body1="left_wrist" body2="left_tool"/>
+    <exclude body1="left_tool" body2="left_jaw"/>
+    <exclude body1="right_base" body2="right_pan"/>
+    <exclude body1="right_pan" body2="right_upper"/>
+    <exclude body1="right_upper" body2="right_fore"/>
+    <exclude body1="right_fore" body2="right_wrist"/>
+    <exclude body1="right_wrist" body2="right_tool"/>
+    <exclude body1="right_tool" body2="right_jaw"/>
+  </contact>
+</mujoco>

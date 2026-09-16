@@ -1,0 +1,25 @@
+[Step 1/11] Parsing and validating input arguments
+[ INFO ] Parsing input parameters
+usage: benchmark_app [-h [HELP]] [-i PATHS_TO_INPUT [PATHS_TO_INPUT ...]] -m
+                     PATH_TO_MODEL [-d TARGET_DEVICE]
+                     [-hint {throughput,tput,cumulative_throughput,ctput,latency,none}]
+                     [-niter NUMBER_ITERATIONS]
+                     [-max_irate MAXIMUM_INFERENCE_RATE] [-t TIME]
+                     [-b BATCH_SIZE] [-shape SHAPE] [-data_shape DATA_SHAPE]
+                     [-layout LAYOUT] [-extensions EXTENSIONS]
+                     [-c PATH_TO_CLDNN_CONFIG] [-cdir CACHE_DIR]
+                     [-lfile [LOAD_FROM_FILE]] [-api {sync,async}]
+                     [-nireq NUMBER_INFER_REQUESTS] [-nstreams NUMBER_STREAMS]
+                     [-inference_only [INFERENCE_ONLY]] [-no_warmup]
+                     [-infer_precision INFER_PRECISION]
+                     [-ip {bool,f16,f32,f64,i8,i16,i32,i64,u8,u16,u32,u64}]
+                     [-op {bool,f16,f32,f64,i8,i16,i32,i64,u8,u16,u32,u64}]
+                     [-iop INPUT_OUTPUT_PRECISION] [--mean_values [R,G,B]]
+                     [--scale_values [R,G,B]] [-nthreads NUMBER_THREADS]
+                     [-pin {YES,NO}] [-latency_percentile LATENCY_PERCENTILE]
+                     [-report_type {no_counters,average_counters,detailed_counters}]
+                     [-report_folder REPORT_FOLDER] [-json_stats [JSON_STATS]]
+                     [-pc [PERF_COUNTS]] [-pcsort {no_sort,sort,simple_sort}]
+                     [-pcseq [PCSEQ]] [-exec_graph_path EXEC_GRAPH_PATH]
+                     [-dump_config DUMP_CONFIG] [-load_config LOAD_CONFIG]
+benchmark_app: error: argument -hint/--perf_hint: invalid choice: 'LATENCY' (choose from 'throughput', 'tput', 'cumulative_throughput', 'ctput', 'latency', 'none')

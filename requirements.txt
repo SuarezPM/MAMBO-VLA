@@ -1,0 +1,9 @@
+# Pinned stack (single source of truth with requirements.lock; mirrored in docs/ARCHITECTURE.md Section 3).
+# Python 3.10 is required. torch allows >=2.8,<2.11; the exact resolved build is frozen in requirements.lock (authority).
+# CUDA provenance: default PyPI index (CUDA-bundled wheels, no custom index-url); installed build confirmed torch==2.10.0+cu128 on RTX 2060 SUPER.
+mujoco==3.12.0
+lerobot==0.4.4
+openvino==2026.3.0
+# CUDA build for local training on NVIDIA (RTX 2060 SUPER); inference and demo
+# use OpenVINO CPU (XPU only on the Intel demo host).
+torch>=2.8,<2.11  # exact version frozen in requirements.lock

@@ -1,0 +1,84 @@
+date_utc=20260916T140419Z
+Linux c3-small-x86-sao-1 6.8.0-139-generic #139-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 03:52:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+--- lscpu ---
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  12
+On-line CPU(s) list:                     0-11
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) E-2386G CPU @ 3.50GHz
+CPU family:                              6
+Model:                                   167
+Thread(s) per core:                      2
+Core(s) per socket:                      6
+Socket(s):                               1
+Stepping:                                1
+CPU(s) scaling MHz:                      20%
+CPU max MHz:                             5100.0000
+CPU min MHz:                             800.0000
+BogoMIPS:                                7008.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap avx512ifma clflushopt intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req vnmi avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm md_clear flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               288 KiB (6 instances)
+L1i cache:                               192 KiB (6 instances)
+L2 cache:                                3 MiB (6 instances)
+L3 cache:                                12 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-11
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+--- openvino version ---
+2026.3.0-22451-8a17657b995-releases/2026/3
+--- available devices ---
+['CPU']
+--- /dev/dri (iGPU?) ---
+total 0
+drwxr-xr-x  3 root root      80 Sep 14 15:02 .
+drwxr-xr-x 19 root root    4420 Sep 14 15:04 ..
+drwxr-xr-x  2 root root      60 Sep 14 15:02 by-path
+crw-rw----  1 root video 226, 0 Sep 14 15:02 card0
+--- /dev/accel (NPU?) ---
+ls: cannot access '/dev/accel': No such file or directory
+--- benchmark_app version ---
+[Step 1/11] Parsing and validating input arguments
+[ INFO ] Parsing input parameters
+usage: benchmark_app [-h [HELP]] [-i PATHS_TO_INPUT [PATHS_TO_INPUT ...]] -m
+                     PATH_TO_MODEL [-d TARGET_DEVICE]
+                     [-hint {throughput,tput,cumulative_throughput,ctput,latency,none}]
+                     [-niter NUMBER_ITERATIONS]
+                     [-max_irate MAXIMUM_INFERENCE_RATE] [-t TIME]
+                     [-b BATCH_SIZE] [-shape SHAPE] [-data_shape DATA_SHAPE]
+                     [-layout LAYOUT] [-extensions EXTENSIONS]
+                     [-c PATH_TO_CLDNN_CONFIG] [-cdir CACHE_DIR]
+                     [-lfile [LOAD_FROM_FILE]] [-api {sync,async}]
+                     [-nireq NUMBER_INFER_REQUESTS] [-nstreams NUMBER_STREAMS]
+                     [-inference_only [INFERENCE_ONLY]] [-no_warmup]
+                     [-infer_precision INFER_PRECISION]
+                     [-ip {bool,f16,f32,f64,i8,i16,i32,i64,u8,u16,u32,u64}]
+                     [-op {bool,f16,f32,f64,i8,i16,i32,i64,u8,u16,u32,u64}]
+                     [-iop INPUT_OUTPUT_PRECISION] [--mean_values [R,G,B]]
+                     [--scale_values [R,G,B]] [-nthreads NUMBER_THREADS]
+                     [-pin {YES,NO}] [-latency_percentile LATENCY_PERCENTILE]
+                     [-report_type {no_counters,average_counters,detailed_counters}]
+                     [-report_folder REPORT_FOLDER] [-json_stats [JSON_STATS]]
+                     [-pc [PERF_COUNTS]] [-pcsort {no_sort,sort,simple_sort}]
+                     [-pcseq [PCSEQ]] [-exec_graph_path EXEC_GRAPH_PATH]
+                     [-dump_config DUMP_CONFIG] [-load_config LOAD_CONFIG]
+benchmark_app: error: the following arguments are required: -m/--path_to_model

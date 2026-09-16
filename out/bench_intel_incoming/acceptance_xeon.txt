@@ -1,0 +1,17 @@
+=== acceptance 20260916T140736Z ===
+--- lspci VGA ---
+05:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 52)
+--- /dev/dri ---
+total 0
+drwxr-xr-x  3 root root      80 Sep 14 15:02 .
+drwxr-xr-x 19 root root    4420 Sep 14 15:04 ..
+drwxr-xr-x  2 root root      60 Sep 14 15:02 by-path
+crw-rw----  1 root video 226, 0 Sep 14 15:02 card0
+--- /dev/accel ---
+ls: cannot access '/dev/accel': No such file or directory
+--- cpu ---
+CPU(s):                                  12
+Model name:                              Intel(R) Xeon(R) E-2386G CPU @ 3.50GHz
+CPU(s) scaling MHz:                      60%
+--- ov devices ---
+2026.3.0-22451-8a17657b995-releases/2026/3 ['CPU']

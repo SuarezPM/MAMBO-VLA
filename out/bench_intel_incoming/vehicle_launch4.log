@@ -1,0 +1,12 @@
+-- fp32 LATENCY sync -> out/bench/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log
+-- fp32 LATENCY async -> out/bench/vehicle_20260916T135349Z/bench_fp32_LATENCY_async.log
+-- fp32 THROUGHPUT sync -> out/bench/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_sync.log
+-- fp32 THROUGHPUT async -> out/bench/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log
+total 44
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep 16 13:54 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Sep 16 13:53 ..
+-rw-rw-r-- 1 ubuntu ubuntu 4758 Sep 16 13:53 bench_fp32_LATENCY_async.log
+-rw-rw-r-- 1 ubuntu ubuntu 4735 Sep 16 13:53 bench_fp32_LATENCY_sync.log
+-rw-rw-r-- 1 ubuntu ubuntu 4766 Sep 16 13:54 bench_fp32_THROUGHPUT_async.log
+-rw-rw-r-- 1 ubuntu ubuntu 4739 Sep 16 13:54 bench_fp32_THROUGHPUT_sync.log
+-rw-rw-r-- 1 ubuntu ubuntu   14 Sep 16 13:54 DONE

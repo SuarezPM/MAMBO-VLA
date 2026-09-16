@@ -1,0 +1,2 @@
+== preflight ==
+missing: benchmark_app (install openvino==2026.3.0)

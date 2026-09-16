@@ -1,0 +1,10 @@
+tag=act_full_v3_100k checkpoint=out/checkpoints/act_full_v3/checkpoints/100000/pretrained_model
+calib_seed=0 batch=1 tol=0.001
+load_s=0.725s
+convert_s=6.538s
+save_s=0.208s
+compile_s=1.070s
+parity_infer_s=0.395s
+total_tracked_s=8.936s
+max_err=1.192093e-06 pass=True ir_size_mb=66.658
+torch_shape=[1, 50, 12] ov_shape=[1, 50, 12]
