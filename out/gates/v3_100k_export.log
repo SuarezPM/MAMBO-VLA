@@ -1,0 +1,27 @@
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+WARNING:root:No accelerated backend detected. Using default cpu, this will be slow.
+WARNING:lerobot.configs.policies:Device 'cuda' is not available. Switching to 'cpu'.
+Loading weights from local directory
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:460: TracerWarning: Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).
+  encoder_in_pos_embed = list(self.encoder_1d_feature_pos_embed.weight.unsqueeze(1))
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:460: TracerWarning: Using len to get tensor shape might cause the trace to be incorrect. Recommended usage would be tensor.shape[0]. Passing a tensor of different shape might lead to errors or silently give incorrect results.
+  encoder_in_pos_embed = list(self.encoder_1d_feature_pos_embed.weight.unsqueeze(1))
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:483: TracerWarning: Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).
+  encoder_in_tokens.extend(list(cam_features))
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:483: TracerWarning: Using len to get tensor shape might cause the trace to be incorrect. Recommended usage would be tensor.shape[0]. Passing a tensor of different shape might lead to errors or silently give incorrect results.
+  encoder_in_tokens.extend(list(cam_features))
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:484: TracerWarning: Iterating over a tensor might cause the trace to be incorrect. Passing a tensor of different shape won't change the number of iterations executed (and might lead to errors or silently give incorrect results).
+  encoder_in_pos_embed.extend(list(cam_pos_embed))
+/home/thelinconx/Proyectos/MAMBO-VLA-RC/.venv/lib/python3.10/site-packages/lerobot/policies/act/modeling_act.py:484: TracerWarning: Using len to get tensor shape might cause the trace to be incorrect. Recommended usage would be tensor.shape[0]. Passing a tensor of different shape might lead to errors or silently give incorrect results.
+  encoder_in_pos_embed.extend(list(cam_pos_embed))
+tag=act_full_v3_100k checkpoint=out/checkpoints/act_full_v3/checkpoints/100000/pretrained_model
+calib_seed=0 batch=1 tol=0.001
+load_s=0.725s
+convert_s=6.538s
+save_s=0.208s
+compile_s=1.070s
+parity_infer_s=0.395s
+total_tracked_s=8.936s
+max_err=1.192093e-06 pass=True ir_size_mb=66.658
+torch_shape=[1, 50, 12] ov_shape=[1, 50, 12]
