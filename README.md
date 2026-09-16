@@ -5,8 +5,8 @@ pick, table set-down, handover, place — from a single relay sentence plus four
 camera views. No hidden seeds, no deleted failures, no borrowed numbers: frozen
 inputs hashed before running, every miss kept, every bench log in-repo.
 
-Public repo: `https://github.com/SuarezPM/MAMBO-VLA` (pinned copy `@76bcf4a`
-cited in `docs/submission_draft/SUBMISSION_COPY.md`).
+Public repo: `https://github.com/SuarezPM/MAMBO-VLA` (pinned copy `@689af97`;
+paste-ready copy `SUBMISSION_COPY.md` kept local-only, not in public mirror).
 
 ## Why this entry deserves your 100 points
 
@@ -22,14 +22,14 @@ Frozen seeds: 3/10 vs 0/10 random/swap — router-gated ACT, hashed, reproducibl
 
 | Metric | Value | Log cited |
 |---|---|---|
-| Closed-loop, frozen seeds 0–9, vehicle `act_full_v3_100k` (ACT-52M, 60 demos) | **3/10** — seeds 1/7650, 4/7775, 7/7750 steps place | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 (transcribed; raw rollout outside Carril A lane) |
-| Random-policy control, same seeds | **0/10**, 0 mm all seeds | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 6 (transcribed) |
+| Closed-loop, frozen seeds 0–9, vehicle `act_full_v3_100k` (ACT-52M, 60 demos) | **3/10** — seeds 1/7650, 4/7775, 7/7750 steps place | `SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 4 (local-only, not in public mirror; transcribed; raw rollout outside Lane A) |
+| Random-policy control, same seeds | **0/10**, 0 mm all seeds | `SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 6 (local-only, not in public mirror; transcribed) |
 | Swap-instruction control (wrong sentence, same scene) | **0/10**, router refusal, 0 steps | same as above + raw v3-200k swap in `out/gates/v3_200k_rollout.log` (`=== SWAP200K ===`) |
-| Peak selection | v3-100k scores 3/10; v3-200k collapses to 0/10 (65–1620 mm) | `docs/submission_draft/EVIDENCE_INDEX.md` Sec 3 + `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 (transcribed); collapse range raw in `out/gates/v3_200k_rollout.log` |
+| Peak selection | v3-100k scores 3/10; v3-200k collapses to 0/10 (65–1620 mm) | `EVIDENCE_INDEX.md` Sec 3 + `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror; transcribed); collapse range raw in `out/gates/v3_200k_rollout.log` |
 | OpenVINO FP32 IR | 66.658 MB, PyTorch parity max_err **1.192093e-06** (tol 1e-3) | `out/gates/v3_100k_export.log` |
 | Xeon E-2386G CPU, latency path (median, niter 100) | **40.80 ms / 24.51 FPS** | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` (`Median: 40.80 ms`) |
 | Xeon E-2386G CPU, throughput path | **27.85 FPS aggregate (6.96 per-stream)**, 143.66 ms async | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` (`Throughput: 27.85 FPS`, `Median: 143.66 ms`) |
-| OOD seeds 60–79 | place once per line (**1/20 each**), misses kept | filed at `out/ood/OOD_RESULTS_60_79.md` — not re-opened in Carril A (lane boundary), reported as filed |
+| OOD seeds 60–79 | place once per line (**1/20 each**), misses kept | filed at `out/ood/OOD_RESULTS_60_79.md` — not re-opened in Lane A (lane boundary), reported as filed |
 | Demo video | `out/demo/MAMBO_VLA_RC_final.mp4` + narrated `out/demo/MAMBO_VLA_RC_final_narrated.mp4` | see Disclosures for the retained old wording |
 
 6.96/stream = 27.85 / 4 streams (4×256×256 inputs, one forward pass).
@@ -47,7 +47,7 @@ archive, zero v3-100k policy rows).
 | pick | honest-negative — no per-phase telemetry in traces | NOT CITABLE | `out/seeds/traces.jsonl` (no phase field); `out/seeds/traces.full.jsonl` holds only teacher carry notes |
 | set-down | honest-negative — no per-phase telemetry in traces | NOT CITABLE | same as above |
 | handover | honest-negative — no per-phase telemetry in traces | NOT CITABLE | same as above |
-| place | **3/10** (seeds 1/7650, 4/7775, 7/7750; seed 3 max 2457 mm) | CITABLE-TRANSCRIBED | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 |
+| place | **3/10** (seeds 1/7650, 4/7775, 7/7750; seed 3 max 2457 mm) | CITABLE-TRANSCRIBED | `SUBMISSION_TEXT.md` Sec 4 + `EVIDENCE_INDEX.md` Sec 4 (local-only, not in public mirror) |
 
 Do not conflate the teacher ceiling (`out/seeds/seed_*/result.json`: 10/10
 with 3 placed carries each, e.g. seed_1 steps 8144) with the vehicle. Teacher
@@ -84,16 +84,16 @@ out/grounding/paraphrases.jsonl`. Log: `out/grounding/critic_run.log`
 
 | set | rate | label | log cited |
 |---|---|---|---|
-| accepted OK | 15/15 | 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router) | `out/grounding/CRITIC_CHECK.md` + `out/grounding/critic_run.log` |
-| rejected OK | 15/15 | 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router) | same as above |
-| total | 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router), lines with `expect == got` | spec conformance, not generalization | same as above |
+| accepted OK | 15/15 | 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router) | `out/grounding/CRITIC_CHECK.md` + `out/grounding/critic_run.log` |
+| rejected OK | 15/15 | 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router) | same as above |
+| total | 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router), lines with `expect == got` | spec conformance, not generalization | same as above |
 
 Coverage: 4 phases × both arms × both objects (sampling), alias and
 inflections, case/punctuation; rejects cover ambiguous slots, missing slots,
 bare pronouns, out-of-grammar objects, negation, babble, plus the deployment
 and swap sentences. Honest scope: author-locked measures conformance to the
 filed spec; a generalization claim would need independent paraphrases. The
-deployed path stays single-sentence router — unwired (deployment sigue single-sentence router).
+deployed path stays single-sentence router — unwired (deployment stays single-sentence router).
 
 ## Perception lite — P4-lite geometric stride (oracle mask)
 
@@ -108,13 +108,13 @@ posed as detection. Default spawn, overhead cam only. Code:
 
 | metric | value | log cited |
 |---|---|---|
-| est XY err vs naive table-center baseline | 2.77mm xy-only, oracle mask, sesgo Z 29mm vs 130.00mm baseline — stride geométrico, no detector | `out/grounding/PERCEPTION_LITE.md` + `out/grounding/perception_run.log` |
+| est XY err vs naive table-center baseline | 2.77mm xy-only, oracle mask, 29mm Z bias vs 130.00mm baseline — geometric stride, no detector | `out/grounding/PERCEPTION_LITE.md` + `out/grounding/perception_run.log` |
 | self-check reprojection | 0.81px (GT vs mask centroid, ≤3px asked) | same as above |
-| est 3D err | 29.41mm (honest Z bias; 2.77mm xy-only, oracle mask, sesgo Z 29mm; stride geométrico, no detector) | same as above |
+| est 3D err | 29.41mm (honest Z bias; 2.77mm xy-only, oracle mask, 29mm Z bias; geometric stride, no detector) | same as above |
 
 Verdict: stride passed — 2.77mm XY well under the 130mm naive baseline with
-a consistent 0.81px self-check (2.77mm xy-only, oracle mask, sesgo Z 29mm;
-stride geométrico, no detector). Honest reach: geometric chain with oracle
+a consistent 0.81px self-check (2.77mm xy-only, oracle mask, 29mm Z bias;
+geometric stride, no detector). Honest reach: geometric chain with oracle
 association only, not a perceiver. Z bias (~29mm) is expected: back-projected
 centroid is the visible top (~0.823) while GT is the body center (0.794);
 shape completion would be needed for control. One default spawn, one cam, no
@@ -141,16 +141,16 @@ tagged bench — then SHIP/negative by closed-loop.
   table-supported relay, never an airborne handoff.
 - **VLA multi-modal reasoning, 20** — §Policy + §QW swap-gate. One ACT-52M checkpoint gated by
   an explicit router; 4×256×256 RGB @ 20 fps plus measured joint state;
-  out-of-grammar input refused, never guessed. QW rigor sin números nuevos: swap-gate bit-idéntico futuro per `out/determinism/SWAP_GATE_STANDARD.md` + precedente swap 0/10 refusal per `out/gates/v3_200k_rollout.log`.
+  out-of-grammar input refused, never guessed. QW rigor, no new numbers: future bit-identical swap-gate per `out/determinism/SWAP_GATE_STANDARD.md` + swap 0/10 refusal precedent per `out/gates/v3_200k_rollout.log`.
 - **Robustness, 10 seeds, 15** — §Results + §Phase table + §QW heatmap. Frozen inputs,
   per-seed table, random + swap controls, OOD 1/20 per line filed per `out/ood/OOD_RESULTS_60_79.md` + `out/ood/OOD_RESULTS_80_99.md`, all
-  failures retained. QW rigor sin números nuevos: heatmap SOLO TEXTO S/F/* con SU gate (frozen place vs P6-strict, prohíbe comparar filas de distinto gate) en bloque generado abajo.
-- **OpenVINO on Intel, 20** — §Intel bench. One FP32 CPU LATENCY artifact **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` y **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`;
+  failures retained. QW rigor, no new numbers: TEXT-ONLY S/F/* heatmap with SU gate (frozen place vs P6-strict; rows from different gates must not be compared) in the generated block below.
+- **OpenVINO on Intel, 20** — §Intel bench. One FP32 CPU LATENCY artifact **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` and **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`;
   latency/throughput/size/closed-loop on Xeon E-2386G; devices disclosed.
-- **Reproducibility, 10 (QW blindado)** — §Reproduce + §Layout + §QW selección congelada/determinismo/entropy. Pinned stack, frozen scene,
-  hashed seeds per `out/frozen-selection.json`, bench and eval commands plus `scripts/analyze_phases.py`. QW: `Overall: PASS` per `out/determinism/DETERMINISM_REPORT.md` + `results table: FRESH` per `scripts/results_table.py --check` + futuras 200-219 solo hashes per `out/seeds_entropy/seed_hashes_entropy.json` (cero evals).
-- **Innovation, 5** — §Journey. Intermediate-peak selection rule (pico **20.5**ép v3-100k 3/10 vs colapso **41**ép v3-200k 0/10 per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `out/gates/v3_200k_rollout.log`) y
-  vision-sensitivity diagnostics, both learned from filed internal ablations. QW Presentation/Business+: ADRs índice per `docs/adr/` + predicados por gate per `out/determinism/GOAL_PREDICATES.md`.
+- **Reproducibility, 10 (QW hardened)** — §Reproduce + §Layout + §QW frozen-selection/determinism/entropy. Pinned stack, frozen scene,
+  hashed seeds per `out/frozen-selection.json`, bench and eval commands plus `scripts/analyze_phases.py`. QW: `Overall: PASS` per `out/determinism/DETERMINISM_REPORT.md` + `results table: FRESH` per `scripts/results_table.py --check` + future 200-219 hashes only per `out/seeds_entropy/seed_hashes_entropy.json` (zero evals).
+- **Innovation, 5** — §Journey. Intermediate-peak selection rule (peak **20.5**ep v3-100k 3/10 vs collapse **41**ep v3-200k 0/10 per `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror) + `out/gates/v3_200k_rollout.log`) and
+  vision-sensitivity diagnostics, both learned from filed internal ablations. QW Presentation/Business+: ADR index per `docs/adr/` + per-gate predicates per `out/determinism/GOAL_PREDICATES.md`.
 
 ## Task
 
@@ -215,7 +215,7 @@ scored submission; the floor is reported, not hidden.
    0/10 (65–1620 mm,
    `out/gates/v3_200k_rollout.log`) — memorization degradation, reported as
    data. The vision trend is reported honestly as proprioceptive dominance
-   (ratio 6.6 → 3.3 across 20k–200k, filed in `docs/submission_draft/EVIDENCE_INDEX.md` Sec 3),
+   (ratio 6.6 → 3.3 across 20k–200k, filed in `EVIDENCE_INDEX.md` Sec 3 (local-only, not in public mirror)),
    not as grounding the system does not have.
 
 All filed numbers above are measured, frozen-protocol values; failures are
@@ -267,8 +267,8 @@ regenerates byte-identically via `scripts/analyze_phases.py` (stdlib only).
   `acceptance_xeon.txt`)
 - `out/gates/` — `v3_100k_export.log` (parity) + `v3_200k_rollout.log` (0/10 collapse)
 - `out/demo/` — final video + per-seed clips
-- `docs/submission_draft/` — `SUBMISSION_TEXT.md`, `EVIDENCE_INDEX.md`,
-  `SUBMISSION_COPY.md` (paste-ready copy)
+- `docs/submission_draft/` — `FROZEN_PROTOCOL.md` (public mirror); `SUBMISSION_TEXT.md`, `EVIDENCE_INDEX.md`,
+  `SUBMISSION_COPY.md` (paste-ready copy, local-only, not in public mirror)
 
 ## Intel bench
 
@@ -342,9 +342,9 @@ Log: `out/grounding/critic_run.log` (exit 0).
 
 | set | result | log cited |
 |---|---|---|
-| acceptable orders | **15/15** acceptedOK — 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router) | `out/grounding/critic_run.log` |
-| adversarial rejections | **15/15** rejectedOK — 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router) | `out/grounding/critic_run.log` |
-| total | **30/30 author-locked (spec lock)**, unwired (deployment sigue single-sentence router), every line `expect == got` | `out/grounding/paraphrases.jsonl` + `out/grounding/critic_run.log` |
+| acceptable orders | **15/15** acceptedOK — 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router) | `out/grounding/critic_run.log` |
+| adversarial rejections | **15/15** rejectedOK — 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router) | `out/grounding/critic_run.log` |
+| total | **30/30 author-locked (spec lock)**, unwired (deployment stays single-sentence router), every line `expect == got` | `out/grounding/paraphrases.jsonl` + `out/grounding/critic_run.log` |
 
 Coverage (accepted): 4 phases × both arms × both objects (sampled),
 aliases (pick up, grasp, set down, hand over, hands off), inflections,
@@ -378,12 +378,12 @@ detection. Spawn: XML default (`mug=[-0.12,0.02,0.794]`), no seed bundles
 
 | metric | value | log cited |
 |---|---|---|
-| estimated XY error vs naive table-center baseline | **2.77mm xy-only, oracle mask, sesgo Z 29mm** (`err_est_xy=2.77mm` vs `err_base_xy=130.00mm`) — stride geométrico, no detector | `out/grounding/perception_run.log` |
+| estimated XY error vs naive table-center baseline | **2.77mm xy-only, oracle mask, 29mm Z bias** (`err_est_xy=2.77mm` vs `err_base_xy=130.00mm`) — geometric stride, no detector | `out/grounding/perception_run.log` |
 | geometric self-check (reprojection) | **0.81px** (GT reprojected against mask centroid, ≤3px required) | `out/grounding/perception_run.log` |
-| estimated 3D error (honest Z bias) | **29.41mm** — 2.77mm xy-only, oracle mask, sesgo Z 29mm; stride geométrico, no detector (see limits) | `out/grounding/perception_run.log` |
+| estimated 3D error (honest Z bias) | **29.41mm** — 2.77mm xy-only, oracle mask, 29mm Z bias; geometric stride, no detector (see limits) | `out/grounding/perception_run.log` |
 
-Verdict: SHIP of stride — stride geométrico, no detector (2.77mm
-xy-only, oracle mask, sesgo Z 29mm): XY error far below the naive
+Verdict: SHIP of stride — geometric stride, no detector (2.77mm
+xy-only, oracle mask, 29mm Z bias): XY error far below the naive
 baseline (2.77mm ≪ 130mm) with a consistent geometric self-check
 (0.81px). Honest scope: it checks the geometric chain with oracle
 association, not a perceptor. Limits filed, not pursued here: the ~29mm
@@ -412,8 +412,8 @@ lack of tooling, not by design choice. INT8-vs-FP32 parity: not measured
 (no INT8 IR; `out/export/int8/` empty for this reason; FP32 parity cited
 above read-only). Closed-loop INT8: not evaluated (no IR to evaluate);
 frozen FP32 cited, untouched: vehicle 3/10 (seeds 1/7650, 4/7775, 7/7750),
-random 0/10, swap 0/10 per README Sec Result +
-`docs/submission_draft/SUBMISSION_TEXT.md` Sec 4. Bench INT8: none (no
+   random 0/10, swap 0/10 per README Sec Result +
+   `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror). Bench INT8: none (no
 model); FP32 local cited read-only (AMD Ryzen 5 3600, p50 68.10 ms / p95
 71.53 ms, 16.90 FPS agg / 4.22 per-stream, niter 100+warmup 10) per
 `out/bench_local/bench_local_cpu.json`, Xeon never mixed. What the texts
@@ -425,41 +425,41 @@ parity, closed-loop 0–9 under the same protocol, tagged bench — and only
 then a SHIP/negative verdict by closed-loop. Full report:
 `out/eval_int8/INT8_REPORT.md`.
 
-## QW — selección congelada (Fase A, disclosed)
+## QW — frozen selection (Phase A, disclosed)
 
-- Fuente: `out/frozen-selection.json` (`frozen_at_utc` 2026-09-16T19:43:24Z per `out/frozen-selection.json`).
-- Regla literal: `Regla vigente desde frozen_at_utc; la elección 100k>200k fue eval-informada (3/10 vs 0/10 en 0-9) y queda disclosed como tal, no como selección ciega` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 4.
-- Train/eval: train seeds 0-59 (0-9 original + 10-29 extra + 30-59 v3; 60 demos teacher scripted) per `scripts/convert_v3.py:9-11,174-179` + `scripts/run_seeds_v3.py:55`; evaluation con `rollouts closed-loop nunca ejecutados antes del scoring (frames demo exceptuados)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 3.
-- Baterías con SU gate: `frozen-ood-80-99 (frozen place)` + `frozen-disturb-100-119 disturb/baseline/preplaced (P6-strict)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 5 + `out/determinism/GOAL_PREDICATES.md`.
-- Números congelados ya citados (nada nuevo): **3/10** seeds 1/7650, 4/7775, 7/7750 per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4; paridad max_err **1.1920928955078125e-06** per `out/export/act_full_v3_100k/parity.json`; Xeon **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` y **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`; pico **20.5**ép (v3-100k) vs colapso **41**ép (v3-200k 0/10, 65–1620 mm) per `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `out/gates/v3_200k_rollout.log`.
+- Source: `out/frozen-selection.json` (`frozen_at_utc` 2026-09-16T19:43:24Z per `out/frozen-selection.json`).
+- Literal rule: `Rule in force since frozen_at_utc; the 100k>200k choice was eval-informed (3/10 vs 0/10 on 0-9) and stands disclosed as such, not as blind selection` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 4.
+- Train/eval: train seeds 0-59 (0-9 original + 10-29 extra + 30-59 v3; 60 demos teacher scripted) per `scripts/convert_v3.py:9-11,174-179` + `scripts/run_seeds_v3.py:55`; evaluation with `closed-loop rollouts never run before scoring (demo frames excepted)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 3.
+- Batteries with SU gate: `frozen-ood-80-99 (frozen place)` + `frozen-disturb-100-119 disturb/baseline/preplaced (P6-strict)` per `out/frozen-selection.json` + `docs/submission_draft/FROZEN_PROTOCOL.md` Sec 5 + `out/determinism/GOAL_PREDICATES.md`.
+- Frozen numbers already cited (nothing new): **3/10** seeds 1/7650, 4/7775, 7/7750 per `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror); parity max_err **1.1920928955078125e-06** per `out/export/act_full_v3_100k/parity.json`; Xeon **40.80 ms / 24.51 FPS** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` and **27.85 FPS aggregate (6.96 per-stream)** per `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log`; peak **20.5**ep (v3-100k) vs collapse **41**ep (v3-200k 0/10, 65–1620 mm) per `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror) + `out/gates/v3_200k_rollout.log`.
 
-## QW — ADRs (índice)
+## QW — ADRs (index)
 
 - `docs/adr/0001-router-gating-single-instruction.md` — single-sentence router, swap 0/10 refusal.
-- `docs/adr/0002-peak-selection-eval-informada.md` — pico 20.5ép vs 41ép disclosed, 3/10 vs 0/10 en 0-9.
+- `docs/adr/0002-peak-selection-eval-informada.md` — peak 20.5ep vs 41ep disclosed, 3/10 vs 0/10 on 0-9.
 - `docs/adr/0003-fp32-only-scored.md` — FP32-only, FP16 no-op, INT8 **not shipped — NNCF absent from the frozen env** per `out/eval_int8/INT8_REPORT.md`.
-- `docs/adr/0004-no-docker.md` — sin imagen, reproducibilidad vía lock+scripts+hashes.
+- `docs/adr/0004-no-docker.md` — no image; reproducibility via lock+scripts+hashes.
 
-## QW — determinismo (artefactos, jamás closed-loop)
+## QW — determinism (artifacts, never closed-loop)
 
 - `Overall: PASS` per `out/determinism/DETERMINISM_REPORT.md`; `results table: FRESH` per `scripts/results_table.py --check`.
-- Check (a) smoke 1 seed con generador real `scripts/run_seeds_ood.py:seed_bundle_ood` vs `out/seeds_ood/seed_hashes_ood.json` (seed 60) per `scripts/determinism_check.py` + `out/determinism/determinism_check.log`.
-- Closed-loop excluido por no-determinista: seed 93 run1 7750 steps per `out/seeds_ood/logs_ood_80_99/eval_80_99.log` vs rerun 7775 per `out/seeds_ood/logs_ood_80_99/eval_80_99_rerun.log` + `out/seeds_ood/logs_ood_80_99/results_80_99.json`.
-- Predicados por gate en `out/determinism/GOAL_PREDICATES.md`: frozen place 1.5cm+upright+home vs P6-strict 3cm+yaw+upright+released solo-disturb; no redefinen pasado.
+- Check (a) smoke 1 seed with real generator `scripts/run_seeds_ood.py:seed_bundle_ood` vs `out/seeds_ood/seed_hashes_ood.json` (seed 60) per `scripts/determinism_check.py` + `out/determinism/determinism_check.log`.
+- Closed-loop excluded as non-deterministic: seed 93 run1 7750 steps per `out/seeds_ood/logs_ood_80_99/eval_80_99.log` vs rerun 7775 per `out/seeds_ood/logs_ood_80_99/eval_80_99_rerun.log` + `out/seeds_ood/logs_ood_80_99/results_80_99.json`.
+- Per-gate predicates in `out/determinism/GOAL_PREDICATES.md`: frozen place 1.5cm+upright+home vs P6-strict 3cm+yaw+upright+released disturb-only; they do not redefine the past.
 
-## QW — heatmap robustez (solo texto, en bloque generado)
+## QW — robustness heatmap (text only, in generated block)
 
-- Ver heatmap SOLO TEXTO en el bloque generado abajo: filas=baterías con SU gate etiquetado, columnas=seeds, celdas=S/F/* (S=success por SU gate, F=fail, *=fling>=1000mm) desde `out/seeds_ood/logs_ood_80_99/results_80_99.json` + `out/seeds_disturb/results_disturb.json` + `out/seeds_disturb/results_baseline.json` + `out/seeds_disturb/results_preplaced.json`.
-- Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples per `out/ood/RANDOMIZATION.md` + `out/determinism/GOAL_PREDICATES.md`.
-- Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)` per `out/ood/OOD_DISTURB.md`.
+- See TEXT-ONLY heatmap in the generated block below: rows=batteries with tagged SU gate, columns=seeds, cells=S/F/* (S=success per SU gate, F=fail, *=fling>=1000mm) from `out/seeds_ood/logs_ood_80_99/results_80_99.json` + `out/seeds_disturb/results_disturb.json` + `out/seeds_disturb/results_baseline.json` + `out/seeds_disturb/results_preplaced.json`.
+- Do not compare rows from different gates: frozen place vs P6-strict are not apples-to-apples per `out/ood/RANDOMIZATION.md` + `out/determinism/GOAL_PREDICATES.md`.
+- Preplaced always cites `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)` per `out/ood/OOD_DISTURB.md`.
 
-## QW — swap-gate estándar (futuras policies)
+## QW — standard swap-gate (future policies)
 
-- Protocolo bit-idéntico misma seed/instrucción cambiada en `out/determinism/SWAP_GATE_STANDARD.md`; precedente swap 0/10 refusal per `out/gates/v3_200k_rollout.log` (`=== SWAP200K ===`) + `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4; null-swap idéntico como ejemplo de rigor.
+- Bit-identical protocol, same seed/changed instruction, in `out/determinism/SWAP_GATE_STANDARD.md`; swap 0/10 refusal precedent per `out/gates/v3_200k_rollout.log` (`=== SWAP200K ===`) + `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror); identical null-swap as rigor example.
 
-## QW — entropy-semillas futuras (cero evals)
+## QW — entropy future seeds (zero evals)
 
-- Futuras 200-219 sin evaluar; solo hashes en `out/seeds_entropy/seed_hashes_entropy.json` + `out/seeds_entropy/generation.log` (generador real `scripts/run_seeds_ood.py:seed_bundle_ood`, cero evals); uso futuro per `out/seeds_entropy/README.md`.
+- Future 200-219 not evaluated; hashes only in `out/seeds_entropy/seed_hashes_entropy.json` + `out/seeds_entropy/generation.log` (real generator `scripts/run_seeds_ood.py:seed_bundle_ood`, zero evals); future use per `out/seeds_entropy/README.md`.
 
 ## Disclosures and known negatives
 
@@ -481,7 +481,7 @@ then a SHIP/negative verdict by closed-loop. Full report:
 - Vehicle pick / set-down / handover rates: honest-negative — no per-phase
   telemetry in `out/seeds/traces.jsonl`; see
   `out/phases/phase_breakdown_v3_100k.md` Sec 4 and Sec 7.
-- OOD seeds 60–79 raw logs not re-opened in Carril A; 1/20 per line reported
+- OOD seeds 60–79 raw logs not re-opened in Lane A; 1/20 per line reported
   as filed at `out/ood/OOD_RESULTS_60_79.md`.
 - 20k rollout 0/10 and the v1 0–2/10 band are retained as floor, not deleted.
 - All scene assets are primitive-built or license-free.
@@ -489,16 +489,16 @@ then a SHIP/negative verdict by closed-loop. Full report:
   disturb, 0/20 baseline (1/20 frozen-place only), skip control passes
   20/20 SKIP (wrapper control, 0 policy steps — not policy capability);
   filed at `out/ood/OOD_DISTURB.md`, seeds 0–9 untouched.
-- Slot critic: 30/30 author-locked (spec lock), unwired (deployment sigue single-sentence router) — spec conformity only, rules never model;
+- Slot critic: 30/30 author-locked (spec lock), unwired (deployment stays single-sentence router) — spec conformity only, rules never model;
   filed at `out/grounding/CRITIC_CHECK.md`.
-- Perception lite: stride geométrico, no detector — 2.77mm xy-only, oracle mask, sesgo Z 29mm, oracle lower bound, single spawn/camera;
+- Perception lite: geometric stride, no detector — 2.77mm xy-only, oracle mask, 29mm Z bias, oracle lower bound, single spawn/camera;
   filed at `out/grounding/PERCEPTION_LITE.md`.
 - INT8: not shipped — NNCF absent from the frozen env; nothing INT8
   cited anywhere, only filed FP32 figures; filed at
   `out/eval_int8/INT8_REPORT.md`.
-- Checkpoints fuera del repo por límite del host (model.safetensors 197 MB >
-  100 MB GitHub): el IR FP32 `out/export/act_full_v3_100k/` (66.658 MB,
-  paridad 1.192093e-06) más los logs citados quedan in-repo como evidencia.
+- Checkpoints outside the repo due to host limit (model.safetensors 197 MB >
+  100 MB GitHub): the FP32 IR `out/export/act_full_v3_100k/` (66.658 MB,
+  parity 1.192093e-06) plus the cited logs stay in-repo as evidence.
 
 ## Limitations (honest, all filed)
 
@@ -508,9 +508,9 @@ then a SHIP/negative verdict by closed-loop. Full report:
   without recovery. Skip control passes but adds no placing skill.
 - Slot critic: 30/30 author-locked (spec lock) only; needs independent
   paraphrases for any generalization claim. Deployed path stays
-  single-sentence router — unwired (deployment sigue single-sentence router).
+  single-sentence router — unwired (deployment stays single-sentence router).
   Source: `out/grounding/CRITIC_CHECK.md` + `out/grounding/critic_run.log`.
-- Perception: 2.77mm xy-only, oracle mask, sesgo Z 29mm; stride geométrico, no detector.
+- Perception: 2.77mm xy-only, oracle mask, 29mm Z bias; geometric stride, no detector.
   Oracle association is a lower bound; a real detector would score worse. One
   spawn, overhead cam only. Source: `out/grounding/PERCEPTION_LITE.md` +
   `out/grounding/perception_run.log`.
@@ -521,7 +521,7 @@ then a SHIP/negative verdict by closed-loop. Full report:
 - Local numbers are this-host only (AMD Ryzen 5 3600,
   `out/bench_local/bench_local_cpu.json`); Xeon numbers are frozen from
   another host (`out/bench_intel_incoming/`), never mixed.
-- QW rigor sin números nuevos: heatmap no compara filas de distinto gate (frozen place vs P6-strict) per bloque generado; entropy 200-219 sin evaluar per `out/seeds_entropy/generation.log`; swap-gate futuro sin evals nuevas per `out/determinism/SWAP_GATE_STANDARD.md`; determinismo solo artefactos (`Overall: PASS`), closed-loop excluido (seed 93: 7750 vs 7775) per `out/determinism/DETERMINISM_REPORT.md`.
+- QW rigor, no new numbers: heatmap does not compare rows from different gates (frozen place vs P6-strict) per generated block; entropy 200-219 not evaluated per `out/seeds_entropy/generation.log`; future swap-gate with no new evals per `out/determinism/SWAP_GATE_STANDARD.md`; determinism artifacts only (`Overall: PASS`), closed-loop excluded (seed 93: 7750 vs 7775) per `out/determinism/DETERMINISM_REPORT.md`.
 
 ## Rules compliance
 
@@ -536,22 +536,22 @@ network in the bounded-grammar router (exactly the relay sentence accepted,
 anything else refused with 0 steps). Developed locally; deployed and
 benchmarked on Intel (Xeon E-2386G + OpenVINO 2026.3.0, CPU).
 
-Evidence: per-seed tables (`docs/submission_draft/SUBMISSION_TEXT.md` Sec 4),
+Evidence: per-seed tables (`SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror)),
 bench logs (`out/bench_intel_incoming/` with host acceptance), the scored IR
 and the final video are all in-repo; failures are retained alongside
 successes.
 
-## Quickstart (Carril A, este host)
+## Quickstart (Lane A, this host)
 
 ```bash
 bash scripts/quickstart.sh 2>&1 | tee out/bench_local/quickstart.log
 ```
 
-Cadena: setup → self-check (`scripts/env_check.py`) → export(check, sin
-re-exportar) → bench (`scripts/bench_openvino_local.py`, warmup10+n100 CPU
-FP32) → eval smoke 1 seed (`--seeds 60 --swap`, router refusal 0 steps, sin
-tocar seeds 0-9). Tabla auto-generada debajo (`scripts/results_table.py`,
-solo lee, no inventa).
+Chain: setup → self-check (`scripts/env_check.py`) → export (check, no
+re-export) → bench (`scripts/bench_openvino_local.py`, warmup10+n100 CPU
+FP32) → eval smoke 1 seed (`--seeds 60 --swap`, router refusal 0 steps, without
+touching seeds 0-9). Auto-generated table below (`scripts/results_table.py`,
+reads only, invents nothing).
 
 <!-- results:begin -->
 | Fuente (host) | Metrica | Valor | Log citado |
@@ -582,7 +582,3 @@ _Filas=baterías con SU gate etiquetado; columnas=seeds; celdas=S/F/*. Prohíbe 
 
 _Leyenda: S=success por SU gate, F=fail, *=fling>=1000mm. Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._
 <!-- results:end -->
-
-
-
-
