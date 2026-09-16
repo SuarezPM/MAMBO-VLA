@@ -1,0 +1,7 @@
+# v3-200k vision diagnostic (evidence bridge, not a new measurement)
+# Sources: docs/submission_draft/EVIDENCE_INDEX.md Sec 3 (vision trend),
+# Sec 6 (v3-200k controls). No per-seed entries invented here.
+vision_gate: STATS_RISK/COLLAPSED ratio=3.3
+vision_trend: 20k=6.6 40k=4.9 60k=4.1 80k=4.0 100k=4.0 200k=3.3
+rollout_v3_200k: 0/10 range_mm=65-1620 random=0/10 swap=refusal-0-steps
+verdict: intermediate peak selected (v3-100k); 200k degradation by memorization (filed, not deleted)

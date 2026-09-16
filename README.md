@@ -1,6 +1,6 @@
 # MAMBO-VLA — Multi-modal Action Manipulation for Bimanual Operations via VLA
 
-One instruction-switched visuomotor policy drives two SO-101 arms through a
+One single-instruction visuomotor policy drives two SO-101 arms through a
 dinner-table relay in MuJoCo — pick, table set-down with handover, place —
 from a natural-language instruction plus four camera views. Trained locally,
 exported to OpenVINO FP32, benchmarked on Intel.
@@ -14,15 +14,14 @@ exported to OpenVINO FP32, benchmarked on Intel.
 | Swap-instruction control (wrong sentence, same scene) | 0/10, router refusal, 0 steps |
 | OpenVINO FP32 IR | 66.658 MB, PyTorch parity max_err **1.19e-06** (tol 1e-3) |
 | Intel Xeon E-2386G CPU, latency path (median, niter 100) | **40.80 ms / 24.51 FPS** |
-| Intel Xeon E-2386G CPU, throughput path | **27.85 FPS** (143.66 ms async) |
+| Intel Xeon E-2386G CPU, throughput path | **27.85 FPS aggregate (6.96 per-stream)** (143.66 ms async) |
 | Demo video (10-seed cut + place clip) | `out/demo/MAMBO_VLA_RC_final.mp4` (+ `seed_7.mp4`) |
 
 ## Rubric map (100 pts)
 
 - **End-to-end bimanual dinner-table, 30** — §Task. Dual SO-101 MuJoCo scene,
   table-supported relay, never an airborne handoff.
-- **VLA multi-modal reasoning, 20** — §Policy. One ACT-52M checkpoint switched
-  by instruction sentence; 4×256×256 RGB @ 20 fps plus measured joint state;
+- **VLA multi-modal reasoning, 20** — §Policy. One ACT-52M checkpoint gated by an explicit router; 4×256×256 RGB @ 20 fps plus measured joint state;
   out-of-grammar input refused, never guessed.
 - **Robustness, 10 seeds, 15** — §Results. Frozen inputs, per-seed table,
   random + swap controls, all failures retained.
@@ -31,7 +30,7 @@ exported to OpenVINO FP32, benchmarked on Intel.
 - **Reproducibility, 10** — §Reproduce + §Layout. Pinned stack, frozen scene,
   bench and eval scripts in repo.
 - **Innovation, 5** — §Journey. Intermediate-peak selection rule and
-  vision-dominance gating, both learned from filed internal ablations.
+  vision-sensitivity diagnostics, both learned from filed internal ablations.
 
 ## Task
 
@@ -45,19 +44,19 @@ offline. Cameras: overhead, table_left, table_right, wrist_cam —
 
 ## Policy
 
-LangACT, the sole action-generating network: ACT-52M backbone whose
-environment-state slot carries the instruction embedding — one checkpoint for
-all commands, switched by sentence, not by weights. Input: 4 images plus the
+LangACT, the sole action-generating network: single-instruction baseline
+gated by an explicit router — one checkpoint, one relay sentence accepted,
+anything else refused with 0 steps. Input: 4 images plus the
 12-dim measured joint state. Output: 12-dim absolute joint+jaw action chunks
 (chunk size 50). Operator language passes through a bounded grammar:
 in-grammar commands run, anything else is refused with 0 steps (this refusal
 *is* the swap-instruction control). A frozen off-the-shelf vision-language
-model scores final placements post-hoc; it never emits actions.
+model scores final placements post-hoc (design intent; per-seed verdicts not filed); it never emits actions.
 
 ## Results
 
 Frozen protocol: seeds exactly 0–9, inputs hashed before running, no seed
-re-rolled, every failure retained with log and clip.
+re-rolled; success clips + failure logs/notes retained.
 
 | seed | result | steps | note |
 |---|---|---|---|
@@ -90,8 +89,8 @@ submission; the floor is reported, not hidden.
    control. Seven flat-plate grasp routes all scored 0 — geometric
    impossibility at the hardware envelope, not a tunable. All KILL.
 4. **Vehicle selection rule (the innovation)** — train past the target and
-   evaluate the intermediate peak, not the last checkpoint: v3-100k (≈41
-   epochs) scores 3/10 while v3-200k (≈82 epochs) collapses to 0/10
+evaluate the intermediate peak, not the last checkpoint: v3-100k (≈20.5
+epochs) scores 3/10 while v3-200k (≈41 epochs) collapses to 0/10
    (65–1620 mm) — memorization degradation, reported as data. The vision
    trend is reported honestly as proprioceptive dominance (ratio 6.6 → 3.3
    across 20k–200k), not as grounding the system does not have.
@@ -140,7 +139,7 @@ Host: Xeon E-2386G (12 threads), Ubuntu 24.04, OpenVINO 2026.3.0,
 
 | run (niter 100) | latency sync (median) | latency async | throughput sync | throughput async |
 |---|---|---|---|---|
-| vehicle v3-100k FP32 | **40.80 ms / 24.51 FPS** | 40.97 ms / 24.39 FPS | 71.48 ms / 13.97 FPS | 143.66 ms / **27.85 FPS** |
+| vehicle v3-100k FP32 | **40.80 ms / 24.51 FPS** | 40.97 ms / 24.39 FPS | 71.48 ms / 13.97 FPS | 143.66 ms / **27.85 FPS aggregate (6.96 per-stream)** |
 | rehearsal 20k fp32 | 40.83 ms / 24.50 FPS | 40.89 ms / 24.43 FPS | 71.40 ms / 13.99 FPS | 143.22 ms / 27.22 FPS |
 | rehearsal 20k fp16 | 40.86 ms / 24.43 FPS | 40.83 ms / 24.46 FPS | 71.38 ms / 13.99 FPS | 143.77 ms / 27.30 FPS |
 
@@ -168,7 +167,7 @@ disclosures).
 
 The learned VLA policy (ACT-52M) is the dominant controller end to end:
 images plus measured joint state in, absolute joint+jaw chunks out
-(`training/act_mambo.py`: chunk_size 50, 4×256×256 visual features,
+(`training/act_mambo_v3.py`: chunk_size 50, 4×256×256 visual features,
 12-dim state in, 12-dim action out). IK exists only in expert-data generation
 (`scripts/run_seeds.py` teacher: cartesian waypoints solved through DLS IK in
 `sim/arm.py`). **Zero IK in the deployed path**: `scripts/eval_policy.py`
