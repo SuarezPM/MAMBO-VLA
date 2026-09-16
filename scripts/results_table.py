@@ -49,12 +49,12 @@ def parse_bench_log(path: Path) -> tuple[str, str]:
     try:
         text = path.read_text()
     except OSError:
-        return ("honest-negative (log no leido)", "honest-negative (log no leido)")
+        return ("honest-negative (log unread)", "honest-negative (log unread)")
     med = MED_RE.search(text)
     tput = TPUT_RE.search(text)
     return (
-        med.group(1) + " ms" if med else "honest-negative (sin Median en log)",
-        tput.group(1) + " FPS" if tput else "honest-negative (sin Throughput en log)",
+        med.group(1) + " ms" if med else "honest-negative (no Median in log)",
+        tput.group(1) + " FPS" if tput else "honest-negative (no Throughput in log)",
     )
 
 
@@ -62,7 +62,7 @@ def parse_ood_mean(path: Path) -> str:
     try:
         text = path.read_text()
     except OSError:
-        return f"honest-negative ({path.name} no leido)"
+        return f"honest-negative ({path.name} unread)"
     for line in text.splitlines():
         s = line.strip()
         if s.startswith("| mean |") and "1/20" in s:
@@ -71,7 +71,7 @@ def parse_ood_mean(path: Path) -> str:
             if len(cells) >= 4:
                 return f"{cells[1]} — {cells[3]}"
             return s.replace("|", "/")
-    return f"honest-negative (sin fila mean 1/20 en {path.name})"
+    return f"honest-negative (no 1/20 mean row in {path.name})"
 
 
 MM_RE = re.compile(r"(\d+)\s*mm")
@@ -101,11 +101,11 @@ def _load_rows(path: Path) -> list | None:
 
 
 def build_heatmap() -> str:
-    # Solo texto, desde results JSON existentes. S=SUCCESS por gate, F=FAIL, *=fling>=1000mm.
+    # Text only, from existing results JSON. S=SUCCESS per gate, F=FAIL, *=fling>=1000mm.
     rows: list[str] = []
-    rows.append("### Heatmap de robustez — SOLO TEXTO (S/F/*)")
+    rows.append("### Robustness heatmap — TEXT ONLY (S/F/*)")
     rows.append("")
-    rows.append("_Filas=baterías con SU gate etiquetado; columnas=seeds; celdas=S/F/*. Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples._")
+    rows.append("_Rows=batteries with tagged SU gate; columns=seeds; cells=S/F/*. Do not compare rows from different gates: frozen place vs P6-strict are not apples-to-apples._")
     rows.append("")
     defs = [
         ("frozen-ood-80-99 (frozen place)", R80, "success", "frozen"),
@@ -117,7 +117,7 @@ def build_heatmap() -> str:
         data = _load_rows(path)
         rel = str(path.relative_to(ROOT)) if path.is_absolute() else str(path)
         if data is None:
-            rows.append(f"| {label} | honest-negative ({path.name} no leido) | `{rel}` |")
+            rows.append(f"| {label} | honest-negative ({path.name} unread) | `{rel}` |")
             continue
         data = sorted(data, key=lambda r: int(r.get("seed", 0)))
         seeds = [str(int(r.get("seed", "?"))) for r in data]
@@ -131,9 +131,9 @@ def build_heatmap() -> str:
                 mm = _mm_from_note(str(r.get("note", "")))
             cells.append(_cell(succ, int(mm) if isinstance(mm, (int, float)) else None))
         rows.append(f"| {label} | {' '.join(seeds)} |")
-        rows.append(f"| celdas | {' '.join(cells)} | `{rel}` |")
+        rows.append(f"| cells | {' '.join(cells)} | `{rel}` |")
     rows.append("")
-    rows.append("_Leyenda: S=success por SU gate, F=fail, *=fling>=1000mm. Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._")
+    rows.append("_Legend: S=success per SU gate, F=fail, *=fling>=1000mm. Preplaced always cites `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._")
     return "\n".join(rows) + "\n"
 
 
@@ -143,13 +143,13 @@ def build_table() -> str:
         b = json.loads(BENCH_LOCAL.read_text())
         local_lat = f"{b['p50_ms']} / {b['p95_ms']} ms (p50/p95, niter {b['niter']}+warmup {b['warmup']})"
         local_tput = f"{b['fps_agg']} agg / {b['fps_per_stream']} per-stream FPS"
-        local_host = f"{b.get('cpu_model', 'unknown')} (este host, {b.get('device')}/{b.get('precision')})"
+        local_host = f"{b.get('cpu_model', 'unknown')} (this host, {b.get('device')}/{b.get('precision')})"
         local_cite = "`out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log`"
     except (OSError, KeyError, json.JSONDecodeError) as exc:
-        local_host = "este host (bench_local no leido)"
+        local_host = "this host (bench_local unread)"
         local_lat = f"honest-negative ({exc})"
         local_tput = f"honest-negative ({exc})"
-        local_cite = "`out/bench_local/bench_local_cpu.json` (ausente o ilegible)"
+        local_cite = "`out/bench_local/bench_local_cpu.json` (missing or unreadable)"
 
     # Frozen export parity
     try:
@@ -158,7 +158,7 @@ def build_table() -> str:
         parity_cite = "`out/export/act_full_v3_100k/parity.json` + `export.log`"
     except (OSError, KeyError, json.JSONDecodeError) as exc:
         parity_val = f"honest-negative ({exc})"
-        parity_cite = "`out/export/act_full_v3_100k/parity.json` (no leido)"
+        parity_cite = "`out/export/act_full_v3_100k/parity.json` (unread)"
 
     xeon_lat_med, xeon_lat_tput = parse_bench_log(XEON_LAT)
     xeon_tput_med, xeon_tput_tput = parse_bench_log(XEON_TPUT)
@@ -167,18 +167,18 @@ def build_table() -> str:
     ood80 = parse_ood_mean(OOD_80)
 
     lines = [
-        "| Fuente (host) | Metrica | Valor | Log citado |",
+        "| Source (host) | Metric | Value | Cited log |",
         "|---|---|---|---|",
         f"| Local CPU — {local_host} | latency-sync p50/p95 | {local_lat} | {local_cite} |",
         f"| Local CPU — {local_host} | throughput-async agg/per-stream | {local_tput} | {local_cite} |",
-        f"| Xeon E-2386G congelado (otro host, no este) | latency-sync median / throughput | {xeon_lat_med} / {xeon_lat_tput} | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` |",
-        f"| Xeon E-2386G congelado (otro host, no este) | throughput-async median / throughput agg (6.96/stream = 27.85/4) | {xeon_tput_med} / {xeon_tput_tput} | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` |",
-        f"| Export FP32 IR `act_full_v3_100k` | tamano / paridad PyTorch | {parity_val} | {parity_cite} |",
-        f"| OOD 60-79 v3-100k (filed, no re-abierto) | mean | ` {ood60} ` | `out/ood/OOD_RESULTS_60_79.md` |",
-        f"| OOD 80-99 v3-100k (filed, no re-abierto) | mean | ` {ood80} ` | `out/ood/OOD_RESULTS_80_99.md` |",
-        "| Seeds 0-9 (congeladas, PROHIBIDO re-evaluar en Carril A) | vehicle/random/swap | ver README Sec Result (3/10 vs 0/10 vs 0/10, transcrito) — no re-run aqui | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 |",
+        f"| Xeon E-2386G frozen (other host, not this one) | latency-sync median / throughput | {xeon_lat_med} / {xeon_lat_tput} | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` |",
+        f"| Xeon E-2386G frozen (other host, not this one) | throughput-async median / throughput agg (6.96/stream = 27.85/4) | {xeon_tput_med} / {xeon_tput_tput} | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` |",
+        f"| Export FP32 IR `act_full_v3_100k` | size / parity PyTorch | {parity_val} | {parity_cite} |",
+        f"| OOD 60-79 v3-100k (filed, not re-opened) | mean | ` {ood60} ` | `out/ood/OOD_RESULTS_60_79.md` |",
+        f"| OOD 80-99 v3-100k (filed, not re-opened) | mean | ` {ood80} ` | `out/ood/OOD_RESULTS_80_99.md` |",
+        "| Seeds 0-9 (frozen, MUST NOT re-evaluate) | vehicle/random/swap | see README Results section (3/10 vs 0/10 vs 0/10, transcribed) — no re-run here | `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror) + `EVIDENCE_INDEX.md` Sec 4 (local-only, not in public mirror) |",
         "",
-        "_Local = medido en este host (ver `cpu_model` en JSON). Xeon = cifras congeladas de otro host, citadas no mezcladas. OOD/seeds 0-9 no re-evaluados en este carril._",
+        "_Local = measured on this host (see `cpu_model` in JSON). Xeon = frozen figures from another host, cited not mixed. OOD/seeds 0-9 not re-evaluated in this lane._",
         "",
         build_heatmap().rstrip(),
     ]
@@ -199,10 +199,10 @@ def main() -> int:
         try:
             cur = README.read_text()
         except OSError as exc:
-            print(f"README no leido: {exc}")
+            print(f"README unread: {exc}")
             return 1
         if BEGIN not in cur or END not in cur:
-            print("markers ausentes")
+            print("markers missing")
             return 1
         inside = cur.split(BEGIN, 1)[1].split(END, 1)[0].strip()
         if inside == table.strip():
@@ -213,10 +213,10 @@ def main() -> int:
     try:
         cur = README.read_text()
     except OSError as exc:
-        print(f"README no leido: {exc}")
+        print(f"README unread: {exc}")
         return 1
     if BEGIN in cur and END in cur:
-        assert cur.count(BEGIN) == 1 and cur.count(END) == 1, "README debe tener un unico par BEGIN/END"
+        assert cur.count(BEGIN) == 1 and cur.count(END) == 1, "README must have a single BEGIN/END pair"
         pre, rest = cur.split(BEGIN, 1)
         _, post = rest.split(END, 1)
         new = pre + block + post
@@ -224,9 +224,9 @@ def main() -> int:
         new = cur.rstrip() + "\n\n" + block
     if new != cur:
         README.write_text(new)
-        print("README markers actualizados")
+        print("README markers updated")
     else:
-        print("README ya estaba al dia")
+        print("README already up to date")
     print(table)
     return 0
 

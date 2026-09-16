@@ -554,31 +554,31 @@ touching seeds 0-9). Auto-generated table below (`scripts/results_table.py`,
 reads only, invents nothing).
 
 <!-- results:begin -->
-| Fuente (host) | Metrica | Valor | Log citado |
+| Source (host) | Metric | Value | Cited log |
 |---|---|---|---|
-| Local CPU — AMD Ryzen 5 3600 6-Core Processor (este host, CPU/FP32) | latency-sync p50/p95 | 68.1 / 71.53 ms (p50/p95, niter 100+warmup 10) | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
-| Local CPU — AMD Ryzen 5 3600 6-Core Processor (este host, CPU/FP32) | throughput-async agg/per-stream | 16.9 agg / 4.22 per-stream FPS | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
-| Xeon E-2386G congelado (otro host, no este) | latency-sync median / throughput | 40.80 ms / 24.51 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` |
-| Xeon E-2386G congelado (otro host, no este) | throughput-async median / throughput agg (6.96/stream = 27.85/4) | 143.66 ms / 27.85 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` |
-| Export FP32 IR `act_full_v3_100k` | tamano / paridad PyTorch | 66.658 MB, max_err 1.192093e-06 (tol 0.001, pass=True) | `out/export/act_full_v3_100k/parity.json` + `export.log` |
-| OOD 60-79 v3-100k (filed, no re-abierto) | mean | ` **1/20** — seed 65 places; flings at 67, 78 ` | `out/ood/OOD_RESULTS_60_79.md` |
-| OOD 80-99 v3-100k (filed, no re-abierto) | mean | ` **1/20** — seed 93 places; fling at 83 ` | `out/ood/OOD_RESULTS_80_99.md` |
-| Seeds 0-9 (congeladas, PROHIBIDO re-evaluar en Carril A) | vehicle/random/swap | ver README Sec Result (3/10 vs 0/10 vs 0/10, transcrito) — no re-run aqui | `docs/submission_draft/SUBMISSION_TEXT.md` Sec 4 + `docs/submission_draft/EVIDENCE_INDEX.md` Sec 4 |
+| Local CPU — AMD Ryzen 5 3600 6-Core Processor (this host, CPU/FP32) | latency-sync p50/p95 | 68.1 / 71.53 ms (p50/p95, niter 100+warmup 10) | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
+| Local CPU — AMD Ryzen 5 3600 6-Core Processor (this host, CPU/FP32) | throughput-async agg/per-stream | 16.9 agg / 4.22 per-stream FPS | `out/bench_local/bench_local_cpu.json` + `out/bench_local/bench_local_run.log` |
+| Xeon E-2386G frozen (other host, not this one) | latency-sync median / throughput | 40.80 ms / 24.51 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_LATENCY_sync.log` |
+| Xeon E-2386G frozen (other host, not this one) | throughput-async median / throughput agg (6.96/stream = 27.85/4) | 143.66 ms / 27.85 FPS | `out/bench_intel_incoming/vehicle_20260916T135349Z/bench_fp32_THROUGHPUT_async.log` |
+| Export FP32 IR `act_full_v3_100k` | size / parity PyTorch | 66.658 MB, max_err 1.192093e-06 (tol 0.001, pass=True) | `out/export/act_full_v3_100k/parity.json` + `export.log` |
+| OOD 60-79 v3-100k (filed, not re-opened) | mean | ` **1/20** — seed 65 places; flings at 67, 78 ` | `out/ood/OOD_RESULTS_60_79.md` |
+| OOD 80-99 v3-100k (filed, not re-opened) | mean | ` **1/20** — seed 93 places; fling at 83 ` | `out/ood/OOD_RESULTS_80_99.md` |
+| Seeds 0-9 (frozen, MUST NOT re-evaluate) | vehicle/random/swap | see README Results section (3/10 vs 0/10 vs 0/10, transcribed) — no re-run here | `SUBMISSION_TEXT.md` Sec 4 (local-only, not in public mirror) + `EVIDENCE_INDEX.md` Sec 4 (local-only, not in public mirror) |
 
-_Local = medido en este host (ver `cpu_model` en JSON). Xeon = cifras congeladas de otro host, citadas no mezcladas. OOD/seeds 0-9 no re-evaluados en este carril._
+_Local = measured on this host (see `cpu_model` in JSON). Xeon = frozen figures from another host, cited not mixed. OOD/seeds 0-9 not re-evaluated in this lane._
 
-### Heatmap de robustez — SOLO TEXTO (S/F/*)
+### Robustness heatmap — TEXT ONLY (S/F/*)
 
-_Filas=baterías con SU gate etiquetado; columnas=seeds; celdas=S/F/*. Prohíbe comparar filas de distinto gate: frozen place vs P6-strict no son apples-to-apples._
+_Rows=batteries with tagged SU gate; columns=seeds; cells=S/F/*. Do not compare rows from different gates: frozen place vs P6-strict are not apples-to-apples._
 
 | frozen-ood-80-99 (frozen place) | 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 |
-| celdas | F F F * F F F F F F F F F S F F F F F F | `out/seeds_ood/logs_ood_80_99/results_80_99.json` |
+| cells | F F F * F F F F F F F F F S F F F F F F | `out/seeds_ood/logs_ood_80_99/results_80_99.json` |
 | frozen-disturb-100-119 disturb (P6-strict) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
-| celdas | F F F F F F F F F F F F F F F F F F F F | `out/seeds_disturb/results_disturb.json` |
+| cells | F F F F F F F F F F F F F F F F F F F F | `out/seeds_disturb/results_disturb.json` |
 | frozen-disturb-100-119 baseline (P6-strict) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
-| celdas | F F F F F F F F * F F F F F F F * F F F | `out/seeds_disturb/results_baseline.json` |
+| cells | F F F F F F F F * F F F F F F F * F F F | `out/seeds_disturb/results_baseline.json` |
 | frozen-disturb-100-119 preplaced 20/20 SKIP (wrapper control, 0 policy steps — not policy capability) (P6-strict skip) | 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 |
-| celdas | S S S S S S S S S S S S S S S S S S S S | `out/seeds_disturb/results_preplaced.json` |
+| cells | S S S S S S S S S S S S S S S S S S S S | `out/seeds_disturb/results_preplaced.json` |
 
-_Leyenda: S=success por SU gate, F=fail, *=fling>=1000mm. Preplaced cita siempre `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._
+_Legend: S=success per SU gate, F=fail, *=fling>=1000mm. Preplaced always cites `20/20 SKIP (wrapper control, 0 policy steps — not policy capability)`._
 <!-- results:end -->
